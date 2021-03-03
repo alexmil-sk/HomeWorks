@@ -1,0 +1,39 @@
+.top-menu {
+	display: block;
+	height: 51px;
+	background-color: #fff;
+	margin: 0 auto;
+	padding-top: 15px;
+}
+
+.menu__list {
+		@include flexbox();
+		//padding: 13px 0 16px 0;
+		
+		li {
+			padding-right: 45px;
+			&:last-child {
+				padding-right: 0;
+			}
+		}
+}
+
+.menu__link {
+	color: #222222;
+	font-size: 14px;
+	font-weight: 700;
+	//line-height: 55px;
+	text-align: left;
+	text-transform: uppercase;	
+	padding-bottom: 18px;
+	&:hover {
+		border-bottom: 3px solid #ef5b70;
+	}
+	&:active {
+		color: #999999;
+		border-bottom: none;
+	}
+
+}
+
+
