@@ -160,7 +160,7 @@ summary::before {
 
 //<CASCADE BROWSE>---------------------------------------
 
-.cascade {
+.cascade-browse {
 	border: 2px solid #e8e8e8;
 	border-radius: 5px;
 	background-color: #ffffff;
@@ -189,7 +189,7 @@ summary::before {
 	}
 }
 
-.cascade__item {
+.cascade-browse__item {
 	margin-right: 46px;
 
 	&:last-child {
