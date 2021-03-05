@@ -1,5 +1,7 @@
 @font-face {
 	font-family: 'icon';
+
+
 	src: url('../fonts/icon.eot?xur34r');
 	src: url('../fonts/icon.eot?xur34r#iefix') format('embedded-opentype'),
 		url('../fonts/icon.ttf?xur34r') format('truetype'),
@@ -85,4 +87,20 @@
 
 .icon-arrow-right:active::after {
 	color: white;
+}
+
+.icon-ctrl:before {
+	content: "\ea50";
+	 //МАКЕТНЫЕ СВОЙСТВА 
+	width: 8px;
+	height: 14px;
+	color: #ffffff;
+	font-family: "Font Awesome";
+	font-size: 24px;
+	font-weight: 400;
+
+
+	//line-height: 24px;
+	//text-align: center;
+
 }

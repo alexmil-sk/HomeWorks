@@ -1,0 +1,268 @@
+
+//<MAIN SCREEN>==========================================
+.mainScreen_single-item {
+	@include flexbox();
+	position: relative;
+	height: 80vh;
+	width: 100%;
+	height: 777px;
+	border: 1px solid #eaeaea;
+	background-color: #f7f7f7;
+	//background-color: red;
+	img {
+		max-height: 724px;
+		margin: 0 auto;
+	}
+	.slider__arrow {
+		width: 47px;
+		height: 47px;
+		background-color: #D8D8D8;
+		text-align: center;
+		align-self: center;
+		&_l {
+			transform: rotate(270deg);
+			padding-top: 18px;
+		}
+		&_r {
+			transform: rotate(90deg);
+			padding-top: 18px;
+		}
+	}
+}
+//</MAIN SCREEN>==========================================
+
+//<MOSCHINO CHEAP AND CHICK>==========================================
+
+//TITLE-----------
+.empty {
+	position: relative;
+}
+
+.moschino {
+	width: 100%;
+	position: absolute;
+	top: -85px;
+	height: 730px;
+	border: 1px solid #eaeaea;
+	background-color: #ffffff;
+	padding: 73px 259px 122px 259px;
+	&__row {
+		@include flexbox();
+		flex-direction: column;
+		align-items: center;
+		height: 100%;
+		background-color: lightgray;
+	}
+	&__title {
+		@include flexbox();
+		flex-direction: column;
+		align-items:center;
+		padding-bottom: 17px;
+		&-h5 {
+			color: #f16d7f;
+			font-size: 14px;
+			font-weight: 700;
+			line-height: 14px;
+			text-align: center;
+			text-transform: uppercase;
+		}
+	}
+	
+}
+//SLIDER------------
+.moschino-slider {
+	margin-top: 13px;
+	&__row {
+		@include flexbox();
+	}
+	&__item {
+		width: 147px;
+		height: 1px;
+	}
+}
+
+.slider__item_l {
+	width: 42px;
+	border: 1px solid #eaeaea;
+	align-self:center;
+}
+
+.slider__item_c {
+	width: 42px;
+	height: 3px;
+	background-color: #ef5b70;
+}
+
+.slider__item_r {
+	width: 42px;
+	border: 1px solid #eaeaea;
+	align-self:center;
+}
+
+//CHEAP AND CHIC-----
+
+.moschino__cheap-chic {
+	@include flexbox();
+	flex-direction: column;
+	width: 100%;
+	border-bottom: 1px solid #eaeaea;
+	padding-bottom: 44px;
+	//flex: 1 1 auto;
+	&-title {
+		color: #4d4d4d;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 24px;
+		text-align: center;
+		text-transform: uppercase;
+		margin-bottom: 60px;
+	}
+	&-text {
+		color: #5e5e5e;
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 24px;
+		text-align: center;
+		padding-bottom: 28px;
+
+	}
+}
+
+.moschino__material-designer-row {
+	@include flexbox();
+	justify-content: center;
+	flex-wrap: wrap;
+	padding-bottom: 37px;
+}
+
+.moschino__material-content {
+	color: #b9b9b9;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 24px;
+	text-align: center;
+	text-transform: uppercase;
+	margin-right: 44px;
+	span {
+		color: #2f2f2f;
+	}
+}
+
+.moschino__designer-content {
+	//width: 50%;
+	color: #b9b9b9;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 24px;
+	text-align: center;
+	text-transform: uppercase;
+	span {
+		color: #2f2f2f;
+	}
+}
+
+.moschino__price {
+	color: #ef5b70;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 24px;
+	text-align: center;
+}
+
+//CHOOSE---------------
+
+.moschino__choose {
+	width: 537px;
+	padding-top: 63px;
+	&-row {
+		@include flexbox();
+		justify-content: space-between;
+	}
+}
+
+.title {
+	color: #2f2f2f;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 14px;
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 16px;
+}
+
+.moschino__choose-color {
+	@include flexbox();
+	flex-direction: column;
+	}
+
+.choose-color__title {
+		
+	}
+
+.choose-color__select select {
+	width: 144px;
+	height: 35px;
+	border: 1px solid #eaeaea;
+	background-color: #ffffff;
+	color: #bcbcbc;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 24px;
+	text-align: center;
+	padding-left: 33px;
+}
+
+.first {
+	padding-left: 5px;
+}
+
+.moschino__choose-size {
+	@include flexbox();
+	flex-direction: column;
+}
+
+.choose-size {
+	&__title {
+		
+	}
+	&__select {
+
+	}
+}
+
+.moschino__choose-quantity {
+	@include flexbox();
+	flex-direction: column;
+}
+
+.choose-quantity {
+	&__title {
+		
+	}
+	&__input {
+
+		[placeholder] {
+			color: #bcbcbc;
+			font-size: 13px;
+			font-weight: 400;
+			line-height: 24px;
+			text-align: center;
+		}
+	}
+}
+
+//BUTTON---------------
+
+.moschino-btn {
+	&__row {
+
+	}
+	&__logo {
+
+	}
+	&__text {
+
+	}
+}
+
+//</MOSCHINO CHEAP AND CHICK>==========================================

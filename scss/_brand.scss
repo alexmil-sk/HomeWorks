@@ -117,24 +117,12 @@
 		letter-spacing: 0.4px;
 		line-height: 42px;
 		&:hover {
-			border-bottom: 3px solid #ef5b70;
+			//border-bottom: 3px solid #ef5b70;
+			color: #ef5b70;
 		}
 		&:active {
 			color: #999999;
 			border-bottom: none;
 		}
 	}
-
-}
-
-.company {
-
-}
-
-.information {
-
-}
-
-.category {
-
 }

@@ -144,51 +144,6 @@ body {
 		letter-spacing: 0.68px;
 		margin-right: 37px;
 }
-.header__link {
-		max-height: 38px;
-		color: #222222;
-		font-family: Lato;
-		font-size: 14px;
-		font-weight: 300;
-		line-height: 16px;
-		text-align: right;
-		letter-spacing: 0.35px;
-		padding: 10px 25px 12px 15px;
-		margin-top: 7px;
-		margin-bottom: 6px;
-		border-radius: 3px 0 0 3px;
-		border: 1px solid #e6e6e6;
-		background-color: #cdcdcc;
-		position: relative;
-		background-image: linear-gradient(to bottom, #f9f9f9 0%, #f5f5f5 100%);
-}
-.header__link:after {
-		content: "";
-		width: 0;
-		height: 0;
-		border-left: 6px solid transparent;
-		border-right: 6px solid transparent;
-		border-top: 6px solid #838383;
-		position: absolute;
-		left: 78%;
-		top: 46%;
-}
-.header__link:hover:after {
-		border-top: 6px solid red;
-}
-.header__link:active:after {
-		border-top: 6px solid blue;
-}
-.header__link:hover {
-		cursor: pointer;
-		box-shadow: inset 0 0px 15px rgba(241, 99, 99, 0.8);
-		color: red;
-}
-.header__link:active {
-		cursor: pointer;
-		box-shadow: inset 0 0px 5px rgba(36, 0, 241, 0.8);
-		color: blue;
-}
 .header__input {
 		width: 317px;
 		height: 38px;
@@ -243,6 +198,134 @@ body {
 		box-shadow: 0 0px 5px rgba(36, 0, 241, 0.8);
 }
 
+/*
+summary {
+	width: 150px;
+	height: 30px;
+	text-align: center;
+	border: 1px solid #000;
+	line-height: 30px;
+}
+
+summary::before {
+	display: none;
+}
+
+
+summary::after {
+	content: '\25B6';
+	padding-left: 0.5em;
+	color: blue;
+}
+
+/*
+details[open] > summary::after {
+	content: '\25BC';
+}
+*/
+.header__link {
+		max-height: 38px;
+		color: #222222;
+		font-family: Lato;
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 16px;
+		text-align: right;
+		letter-spacing: 0.35px;
+		padding: 10px 25px 12px 15px;
+		margin-top: 7px;
+		margin-bottom: 6px;
+		border-radius: 3px 0 0 3px;
+		border: 1px solid #e6e6e6;
+		background-color: #F5F5F5;
+		position: relative;
+}
+
+summary::before {
+		content: "";
+		display: none;
+}
+
+.cascade {
+		border: 2px solid #e8e8e8;
+		border-radius: 5px;
+		background-color: #ffffff;
+		padding: 20px 25px;
+		position: absolute;
+		top: 27px;
+		left: -25px;
+}
+.cascade__row {
+		display: flex;
+		font-size: 0;
+}
+.cascade:before {
+		content: "";
+		display: block;
+		width: 12px;
+		height: 12px;
+		background-color: #ffffff;
+		border-top: 2px solid #e8e8e8;
+		border-left: 2px solid #e8e8e8;
+		transform: rotate(45deg);
+		position: absolute;
+		top: -7px;
+		left: 35px;
+}
+
+.cascade__item {
+		margin-right: 46px;
+}
+.cascade__item:last-child {
+		margin-right: 0;
+}
+.cascade__item-title {
+		width: 235px;
+		color: #232323;
+		font-size: 14px;
+		line-height: 30px;
+		font-weight: 700;
+		text-align: left;
+		text-transform: uppercase;
+		letter-spacing: 0.35px;
+		margin-bottom: 20px;
+		border-bottom: 1px solid #e8e8e8;
+}
+.cascade__item-list {
+		position: relative;
+}
+.cascade__item-list .super-sale {
+		display: inline-block;
+		width: 71px;
+		color: #ffffff;
+		font-size: 22px;
+		font-weight: 700;
+		line-height: 28px;
+		text-align: left;
+		text-transform: uppercase;
+		letter-spacing: 0.55px;
+		position: absolute;
+		bottom: 12px;
+		right: 6px;
+}
+.cascade__item li {
+		padding-bottom: 20px;
+}
+.cascade__item li:last-child {
+		padding-bottom: 0;
+}
+.cascade__item-link {
+		color: #646464;
+		font-size: 14px;
+		font-weight: 400;
+		text-align: left;
+		letter-spacing: 0.35px;
+		display: block;
+}
+.cascade__item-link:hover {
+		color: #ef5b70;
+}
+
 a.account__link {
 		color: #ffffff;
 		font-size: 15px;
@@ -293,11 +376,18 @@ a.account__link:active:after {
 		display: flex;
 		font-size: 0;
 }
-.menu__list li {
+.menu__list .menu__item {
 		padding-right: 45px;
 }
-.menu__list li:last-child {
+.menu__list .menu__item:last-child {
 		padding-right: 0;
+}
+
+.menu__item {
+		position: relative;
+}
+.menu__item:hover .cascade {
+		display: flex;
 }
 
 .menu__link {
@@ -314,6 +404,87 @@ a.account__link:active:after {
 .menu__link:active {
 		color: #999999;
 		border-bottom: none;
+}
+
+.cascade {
+		border: 2px solid #e8e8e8;
+		border-radius: 5px;
+		background-color: #ffffff;
+		padding: 20px 25px;
+		position: absolute;
+		top: 27px;
+		left: -25px;
+		display: none;
+}
+.cascade__row {
+		display: flex;
+		font-size: 0;
+}
+.cascade:before {
+		content: "";
+		display: block;
+		width: 12px;
+		height: 12px;
+		background-color: #ffffff;
+		border-top: 2px solid #e8e8e8;
+		border-left: 2px solid #e8e8e8;
+		transform: rotate(45deg);
+		position: absolute;
+		top: -7px;
+		left: 35px;
+}
+
+.cascade__item {
+		margin-right: 46px;
+}
+.cascade__item:last-child {
+		margin-right: 0;
+}
+.cascade__item-title {
+		width: 235px;
+		color: #232323;
+		font-size: 14px;
+		line-height: 30px;
+		font-weight: 700;
+		text-align: left;
+		text-transform: uppercase;
+		letter-spacing: 0.35px;
+		margin-bottom: 20px;
+		border-bottom: 1px solid #e8e8e8;
+}
+.cascade__item-list {
+		position: relative;
+}
+.cascade__item-list .super-sale {
+		display: inline-block;
+		width: 71px;
+		color: #ffffff;
+		font-size: 22px;
+		font-weight: 700;
+		line-height: 28px;
+		text-align: left;
+		text-transform: uppercase;
+		letter-spacing: 0.55px;
+		position: absolute;
+		bottom: 12px;
+		right: 6px;
+}
+.cascade__item li {
+		padding-bottom: 20px;
+}
+.cascade__item li:last-child {
+		padding-bottom: 0;
+}
+.cascade__item-link {
+		color: #646464;
+		font-size: 14px;
+		font-weight: 400;
+		text-align: left;
+		letter-spacing: 0.35px;
+		display: block;
+}
+.cascade__item-link:hover {
+		color: #ef5b70;
 }
 
 @font-face {
@@ -395,6 +566,16 @@ a.account__link:active:after {
 
 .icon-arrow-right:active::after {
 		color: white;
+}
+
+.icon-ctrl:before {
+		content: "";
+		width: 8px;
+		height: 14px;
+		color: #ffffff;
+		font-family: "Font Awesome";
+		font-size: 24px;
+		font-weight: 400;
 }
 
 .footer {
@@ -513,15 +694,17 @@ a.account__link:active:after {
 		width: 38px;
 		height: 4px;
 }
-.left__content .slider__item_l {
+.left__content .slider__item_l, .left__content .slider__item_r {
 		background-color: #d9d9d9;
 }
-.left__content .slider__item_l:hover {
+.left__content .slider__item_l:hover, .left__content .slider__item_r:hover {
 		cursor: pointer;
 		background-color: #f16d7f;
+		border: 1px solid #f16d7f;
 }
-.left__content .slider__item_r {
+.left__content .slider__item_c {
 		margin-left: 13px;
+		margin-right: 13px;
 		background-color: #f16d7f;
 }
 
@@ -717,11 +900,238 @@ a.account__link:active:after {
 		line-height: 42px;
 }
 .brand__menu-link:hover {
-		border-bottom: 3px solid #ef5b70;
+		color: #ef5b70;
 }
 .brand__menu-link:active {
 		color: #999999;
 		border-bottom: none;
+}
+
+.mainScreen_single-item {
+		display: flex;
+		font-size: 0;
+		position: relative;
+		height: 80vh;
+		width: 100%;
+		height: 777px;
+		border: 1px solid #eaeaea;
+		background-color: #f7f7f7;
+}
+.mainScreen_single-item img {
+		max-height: 724px;
+		margin: 0 auto;
+}
+.mainScreen_single-item .slider__arrow {
+		width: 47px;
+		height: 47px;
+		background-color: #D8D8D8;
+		text-align: center;
+		align-self: center;
+}
+.mainScreen_single-item .slider__arrow_l {
+		transform: rotate(270deg);
+		padding-top: 18px;
+}
+.mainScreen_single-item .slider__arrow_r {
+		transform: rotate(90deg);
+		padding-top: 18px;
+}
+
+.empty {
+		position: relative;
+}
+
+.moschino {
+		width: 100%;
+		position: absolute;
+		top: -85px;
+		height: 730px;
+		border: 1px solid #eaeaea;
+		background-color: #ffffff;
+		padding: 73px 259px 122px 259px;
+}
+.moschino__row {
+		display: flex;
+		font-size: 0;
+		flex-direction: column;
+		align-items: center;
+		height: 100%;
+		background-color: lightgray;
+}
+.moschino__title {
+		display: flex;
+		font-size: 0;
+		flex-direction: column;
+		align-items: center;
+		padding-bottom: 17px;
+}
+.moschino__title-h5 {
+		color: #f16d7f;
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 14px;
+		text-align: center;
+		text-transform: uppercase;
+}
+
+.moschino-slider {
+		margin-top: 13px;
+}
+.moschino-slider__row {
+		display: flex;
+		font-size: 0;
+}
+.moschino-slider__item {
+		width: 147px;
+		height: 1px;
+}
+
+.slider__item_l {
+		width: 42px;
+		border: 1px solid #eaeaea;
+		align-self: center;
+}
+
+.slider__item_c {
+		width: 42px;
+		height: 3px;
+		background-color: #ef5b70;
+}
+
+.slider__item_r {
+		width: 42px;
+		border: 1px solid #eaeaea;
+		align-self: center;
+}
+
+.moschino__cheap-chic {
+		display: flex;
+		font-size: 0;
+		flex-direction: column;
+		width: 100%;
+		border-bottom: 1px solid #eaeaea;
+		padding-bottom: 44px;
+}
+.moschino__cheap-chic-title {
+		color: #4d4d4d;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 24px;
+		text-align: center;
+		text-transform: uppercase;
+		margin-bottom: 60px;
+}
+.moschino__cheap-chic-text {
+		color: #5e5e5e;
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 24px;
+		text-align: center;
+		padding-bottom: 28px;
+}
+
+.moschino__material-designer-row {
+		display: flex;
+		font-size: 0;
+		justify-content: center;
+		flex-wrap: wrap;
+		padding-bottom: 37px;
+}
+
+.moschino__material-content {
+		color: #b9b9b9;
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 24px;
+		text-align: center;
+		text-transform: uppercase;
+		margin-right: 44px;
+}
+.moschino__material-content span {
+		color: #2f2f2f;
+}
+
+.moschino__designer-content {
+		color: #b9b9b9;
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 24px;
+		text-align: center;
+		text-transform: uppercase;
+}
+.moschino__designer-content span {
+		color: #2f2f2f;
+}
+
+.moschino__price {
+		color: #ef5b70;
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 24px;
+		text-align: center;
+}
+
+.moschino__choose {
+		width: 537px;
+		padding-top: 63px;
+}
+.moschino__choose-row {
+		display: flex;
+		font-size: 0;
+		justify-content: space-between;
+}
+
+.title {
+		color: #2f2f2f;
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 14px;
+		text-align: center;
+		text-transform: uppercase;
+		margin-bottom: 16px;
+}
+
+.moschino__choose-color {
+		display: flex;
+		font-size: 0;
+		flex-direction: column;
+}
+
+.choose-color__select select {
+		width: 144px;
+		height: 35px;
+		border: 1px solid #eaeaea;
+		background-color: #ffffff;
+		color: #bcbcbc;
+		font-size: 13px;
+		font-weight: 400;
+		line-height: 24px;
+		text-align: center;
+		padding-left: 33px;
+}
+
+.first {
+		padding-left: 5px;
+}
+
+.moschino__choose-size {
+		display: flex;
+		font-size: 0;
+		flex-direction: column;
+}
+
+.moschino__choose-quantity {
+		display: flex;
+		font-size: 0;
+		flex-direction: column;
+}
+
+.choose-quantity__input [placeholder] {
+		color: #bcbcbc;
+		font-size: 13px;
+		font-weight: 400;
+		line-height: 24px;
+		text-align: center;
 }
 
 .mainPage {

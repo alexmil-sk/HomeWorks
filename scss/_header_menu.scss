@@ -1,3 +1,5 @@
+//<MAIN MENU>=======================
+
 .top-menu {
 	display: block;
 	height: 51px;
@@ -9,8 +11,7 @@
 .menu__list {
 		@include flexbox();
 		//padding: 13px 0 16px 0;
-		
-		li {
+		.menu__item {
 			padding-right: 45px;
 			&:last-child {
 				padding-right: 0;
@@ -18,11 +19,17 @@
 		}
 }
 
+.menu__item {
+	position: relative;
+	&:hover .cascade {
+		display: flex;
+	}
+}
+
 .menu__link {
 	color: #222222;
 	font-size: 14px;
 	font-weight: 700;
-	//line-height: 55px;
 	text-align: left;
 	text-transform: uppercase;	
 	padding-bottom: 18px;
@@ -33,7 +40,97 @@
 		color: #999999;
 		border-bottom: none;
 	}
-
 }
 
+//</MAIN MENU>=======================
 
+
+//<CASCADE MENU>=====================
+
+.cascade {
+	border: 2px solid #e8e8e8;
+	border-radius: 5px;
+	background-color: #ffffff;
+	padding: 20px 25px;
+	position: absolute;
+	top: 27px;
+	left: -25px;
+	display: none;
+	&__row {
+		@include flexbox();
+	}
+	&:before {
+		content: "";
+		display: block;
+		width: 12px;
+		height: 12px;
+		background-color: #ffffff;
+		border-top: 2px solid #e8e8e8;
+		border-left: 2px solid #e8e8e8;
+		transform: rotate(45deg);
+		position: absolute;
+		top: -7px;
+		left: 35px;
+	}
+}
+
+.cascade__item {
+	margin-right: 46px;
+	&:last-child {
+		margin-right: 0;
+	}
+	&-title {
+		width: 235px;
+		color: #232323;
+		font-size: 14px;
+		line-height: 30px;
+		font-weight: 700;
+		text-align: left;
+		text-transform: uppercase;
+		letter-spacing: 0.35px;
+		margin-bottom: 20px;
+		border-bottom: 1px solid #e8e8e8;
+	}
+	&-menu {
+	}
+	&-list {
+		position: relative;
+		img {
+
+		}
+		.super-sale {
+			display: inline-block;
+			width: 71px;
+			color: #ffffff;
+			font-size: 22px;
+			font-weight: 700;
+			line-height: 28px;
+			text-align: left;
+			text-transform: uppercase;
+			letter-spacing: 0.55px;
+			position: absolute;
+			bottom: 12px;
+			right: 6px;
+		}
+	}
+	li {
+		padding-bottom: 20px;
+		&:last-child {
+			padding-bottom: 0;
+		}
+	}
+	&-link {
+		color: #646464;
+		font-size: 14px;
+		font-weight: 400;
+		//line-height: 28px;
+		text-align: left;
+		letter-spacing: 0.35px;
+		display: block;
+		&:hover {
+			color: #ef5b70;
+		}
+	}
+}
+
+//</CASCADE MENU>=====================

@@ -69,15 +69,18 @@
 		&__item {
 			width: 38px;
 			height: 4px;
-			&_l {
+			&_l,
+			&_r {
 				background-color: #d9d9d9;
 				&:hover {
 					cursor: pointer;
 					background-color: #f16d7f;
+					border: 1px solid #f16d7f;
 				}
 			}
-			&_r {
+			&_c {
 				margin-left: 13px;
+				margin-right: 13px;
 				background-color: #f16d7f;
 			}
 		}
