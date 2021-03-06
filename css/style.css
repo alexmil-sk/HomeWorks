@@ -1179,17 +1179,32 @@ a.account__link:active:after {
 		border: 1px solid #eaeaea;
 		align-self: center;
 }
+.slider__item_l:hover {
+		cursor: pointer;
+		background-color: #f16d7f;
+		border: 1.5px solid #f16d7f;
+}
 
 .slider__item_c {
 		width: 42px;
 		height: 3px;
 		background-color: #ef5b70;
 }
+.slider__item_c:hover {
+		cursor: pointer;
+		background-color: #eaeaea;
+		border: 1px solid #eaeaea;
+}
 
 .slider__item_r {
 		width: 42px;
 		border: 1px solid #eaeaea;
 		align-self: center;
+}
+.slider__item_r:hover {
+		cursor: pointer;
+		background-color: #f16d7f;
+		border: 1.5px solid #f16d7f;
 }
 
 .moschino__cheap-chic {
@@ -1284,6 +1299,7 @@ a.account__link:active:after {
 		display: flex;
 		font-size: 0;
 		flex-direction: column;
+		position: relative;
 }
 
 .choose-color__select {
@@ -1296,7 +1312,40 @@ a.account__link:active:after {
 		font-weight: 400;
 		line-height: 24px;
 		text-align: center;
-		padding-left: 33px;
+		padding-left: 37px;
+}
+.choose-color__select .option-red {
+		color: red;
+}
+.choose-color__select .option-green {
+		color: green;
+}
+.choose-color__select .option-blue {
+		color: blue;
+}
+.choose-color__select .option-yellow {
+		color: #969607;
+}
+
+.checkbox-color {
+		position: absolute;
+		opacity: 0;
+		margin: 10px 0 0 20px;
+}
+
+.checkbox-color + label {
+		position: relative;
+		padding: 0 0 0 60px;
+}
+
+.checkbox-color + label:before {
+		content: "";
+		position: absolute;
+		top: 11px;
+		left: 15px;
+		width: 12px;
+		height: 12px;
+		background: red;
 }
 
 .moschino__choose-size {
@@ -1343,8 +1392,7 @@ a.account__link:active:after {
 		padding-left: 15px;
 }
 .choose-quantity__input:focus {
-		font-weight: 400;
-		color: #bcbcbc;
+		border: 1px solid red;
 }
 
 .moschino-btn__row {
@@ -1385,6 +1433,7 @@ a.account__link:active:after {
 
 .likeAlso {
 		margin-top: 44px;
+		margin-bottom: 73px;
 }
 .likeAlso__title {
 		color: #4d4d4d;
@@ -1393,34 +1442,42 @@ a.account__link:active:after {
 		line-height: 20px;
 		text-align: center;
 		text-transform: uppercase;
+		margin-bottom: 70px;
 }
 .likeAlso__gallery_row {
 		display: flex;
 }
-/*
-.item-text {
-	padding: 20px 15px 0 15px;
-	text-align: left;
+.likeAlso__gallery_item {
+		padding-bottom: 21px;
+		margin-right: 31px;
+}
+.likeAlso__gallery_item:last-child {
+		margin-right: 0;
+}
 
-	&__title {
+.likeAlso__item_2 {
+		margin-top: -12px;
+}
+
+.likeAlso-item-text {
+		padding: 20px 15px 0 15px;
+		text-align: left;
+}
+.likeAlso-item-text__title {
 		color: #222222;
-		font-family: Lato;
 		font-size: 13px;
 		font-weight: 400;
 		text-transform: uppercase;
 		padding-bottom: 17px;
-	}
-
-	&__price {
+}
+.likeAlso-item-text__price {
 		color: #f16d7f;
 		font-family: Lato;
 		font-size: 16px;
 		font-weight: 700;
 		text-transform: uppercase;
-	}
 }
 
-*/
 .mainPage {
 		display: flex;
 		font-size: 0;
