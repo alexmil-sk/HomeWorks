@@ -116,6 +116,8 @@
 		position: relative;
 		&:hover {
 			cursor: pointer;
+			color: red;
+			border: 1px solid red;
 		}
 }
 

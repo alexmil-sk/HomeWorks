@@ -1,0 +1,178 @@
+
+
+//<PRODUCT DETAILS>================================================================
+
+.product-details {
+	height: 776px;
+	width: 100%;
+	display: block;
+	border: 1px solid #000;
+	background-color: gray;
+
+}
+
+//</PRODUCT DETAILS>================================================================
+
+//<SHIPPING ADRESS - COUPON DISCOUNT>===============================================
+.shipping-coupon {
+	//max-height: 350px;
+	width: 100%;
+	&__row {
+		@include flexbox();
+	}
+}
+
+//<LEFT>-------------------------
+
+.shipping-coupon__left {
+	flex: 0 1 33.3333%;
+	&-row {
+		@include flexbox();
+		flex-direction: column;
+		border: 1px solid #000;
+	}
+}
+
+.shipping-coupon__title {
+	color: #222222;
+	font-size: 16px;
+	font-weight: 700;
+	text-align: left;
+	text-transform: uppercase;
+	margin-bottom: 22px;
+}
+
+.bangladesh {
+	&__select {
+		position: relative;
+		width: 355px;
+		height: 45px;
+		margin-bottom: 20px;
+		select {
+			width: 100%;
+			height: 100%;
+			color: #b1b1b1;
+			border: 1px solid #eaeaea;
+			background-color: #ffffff;
+			padding-left: 18px;
+			appearance: none;
+		}
+		&::after {
+			content:'';
+			//display: block;
+			border-style: solid;
+			border-width: 9px 6px 0 6px;
+			border-color: #bdbdbd transparent transparent transparent;
+			position: absolute;
+			pointer-events: none;
+			top: 20px;
+			right: 12px;
+		}
+	}
+}
+
+#country, #postcode {
+	width: 355px;
+	height: 45px;
+	border: 1px solid #eaeaea;
+	background-color: #ffffff;
+	color: #b1b1b1;
+	font-size: 13px;
+	font-weight: 300;
+	text-align: left;
+	padding-left: 18px;
+}
+
+#country {
+	margin-bottom: 20px;
+}
+
+#postcode {
+	margin-bottom: 23px;
+}
+
+.quote {
+	&__btn {
+		//display: block;
+		height: 35px;
+		//width: 100px;
+	}
+	&__link {
+		width: 100%;
+		height: 100%;
+		color: #4a4a4a;
+		font-size: 11px;
+		font-weight: 700;
+		text-align: left;
+		text-transform: uppercase;
+		border: 1px solid #eaeaea;
+		background-color: #ffffff;
+		padding: 9.5px 13.5px;
+		margin-bottom: 79px;
+	}
+}
+
+
+//</LEFT>-------------------------
+//<CENTER>-------------------------
+
+.shipping-coupon__center {
+	flex: 0 1 33.3333%;
+	&-row {
+		@include flexbox();
+		flex-direction: column;
+		border: 1px solid #000;
+	}
+	&-title {
+
+	}
+	&-text {
+
+	}
+}
+
+.state {}
+
+.apply-coupon {
+	&__btn {
+
+	}
+	&__link {
+
+	}
+}
+
+//</CENTER>-------------------------
+//<RIGHT>---------------------------
+
+.shipping-coupon__center {
+	flex: 0 1 33.3333%;
+	&-row {
+		@include flexbox();
+		flex-direction: column;
+		border: 1px solid #000;
+	}
+}
+
+.subTotal {
+
+}
+
+.grandTotal {
+
+}
+
+.apply-coupon__btn {}
+
+.proceed__link {}
+
+//</RIGHT>--------------------------
+//</SHIPPING ADRESS - COUPON DISCOUNT>===============================================
+
+//<VIDEO>============================================================================
+
+
+
+
+//</VIDEO>============================================================================
+

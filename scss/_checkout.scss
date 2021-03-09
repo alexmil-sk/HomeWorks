@@ -1,12 +1,13 @@
 //<NEW ARRIVALS>==================================================================
 .newArrivals {
-	@include flexbox();
 	height: 148px;
 	background-color: #f8f3f4;
-	align-items: center;
+
 	&__row {
 		@include flexbox();
-		justify-content: space-between;
+		justify-content:space-between;
+		padding: 65px 0;
+		//align-items: center;
 	}
 	&__title {
 		color: #f16d7f;
@@ -16,34 +17,53 @@
 		text-align: center;
 		text-transform: uppercase;
 	}
+	&__breadcrumbs {
+
+	}
+}
+
+.player {
+	margin: 50px 0 90px 0;
+	outline: 10px solid #f16d7f;
+}
+
+//<BREADCRUMB>--------------------
+
+.breadcrumb > li + li:before {
+	padding: 0 5px;
+	color: #ccc;
+	content: "/\00a0";
 }
 
 .breadcrumb {
+	@include flexbox();
+	//justify-content: flex-end;
 	font-weight: 700;
 	font-size: 14px;
 	line-height: 20px;
-	text-align: center;
+	//text-align: center;
 	text-transform: uppercase;
-	background-color: #f8f3f4;
-	margin: 0;
-	padding-right: 0;
+	&__list {
+		list-style: none;
+	}
+	&__link {
+		color: #636363;
+		&:hover {
+			color: #f16d7f;
+		}
+		&:active {
+			color: #a5a3a3;
+		}
+	}
 	.active {
 		font-weight: 700;
 		color: #f16d7f;
 	}
-	.breadcrumb__link {
-		color: #636363;
-		&:link {
-			text-decoration: none;
-		}
-		&:hover {
-			color: #a5a3a3;
-		}
-		&:active {
-			color: #f16d7f;
-		}
-	}
 }
+
+
+//</BREADCRUMB>--------------------
+
 
 //</NEW ARRIVALS>=================================================================
 
@@ -51,31 +71,23 @@
 
 .accordion {
 	margin: 89px 0 93px 0;
-	border-bottom: 1px solid #e8e8e8;
 }
 
 .trigger {
-	
-}
-
-.title-accordion {
-	color: #222222;
-	font-size: 16px;
-	font-weight: 700;
-	text-align: left;
-	text-transform: uppercase;
+	border-bottom: 1px solid #e8e8e8;
 }
 
 .accordion .trigger #checkbox-1,
 .accordion .trigger #checkbox-2,
-.accordion .trigger #checkbox-3 {
+.accordion .trigger #checkbox-3,
+.accordion .trigger #checkbox-4,
+.accordion .trigger #checkbox-5,
+.accordion .trigger #checkbox-6 {
 	display: none;
 }
 
 .accordion .trigger .checkbox {
-	//content: '01. Shipping Adress';
 	font-size: 16px;
-	//display: block;
 	margin: 0;
 	line-height: 72px;
 	color: #222222;
@@ -83,6 +95,12 @@
 	cursor: pointer;
 	background-color: #ffffff;
 	text-transform: uppercase;
+	&:hover {
+		color: #ff0d0d;
+	}
+	&:active {
+		color: #929292;
+	}
 }
 
 .accordion .trigger .content-accordion {
@@ -99,7 +117,10 @@
 
 #checkbox-1:checked~.content-accordion,
 #checkbox-2:checked~.content-accordion,
-#checkbox-3:checked~.content-accordion {
+#checkbox-3:checked~.content-accordion,
+#checkbox-4:checked~.content-accordion,
+#checkbox-5:checked~.content-accordion,
+#checkbox-6:checked~.content-accordion {
 	max-height: 473px;
 	transition: max-height 500ms ease-in-out;
 }
@@ -111,7 +132,6 @@
 		min-height: 473px;
 	}
 	&__left {
-		//min-height: 473px;
 		width: 50%;
 		padding-left: 35px;
 	}
@@ -179,7 +199,6 @@
 		background-color: #ffffff;
 		margin: 0 14px 31px 0;
 	}
-
 	label {
 		color: #222222;
 		font-family: Lato;
@@ -237,37 +256,24 @@ a.register__link {
 	&:active {
 		color: #cccccc;
 	}
-/*
-	&::before {
-		content: "";
-		width: 8px;
-		height: 8px;
-		color: #b3b2b2;
-		font-size: 13px;
-		font-weight: 700;
-		line-height: 20px;
-		text-align: left;
-		padding-right: 4px;
-	}
-*/
 }
 
 .continue {
 	&__btn {
-		margin-top: 42px;
-
+		margin-top: 44px;
 	}
 	&__link {
 		color: #4a4a4a;
-		font-family: Lato;
 		font-size: 14px;
 		font-weight: 700;
-		text-align: left;
+		text-align: center;
 		text-transform: uppercase;
 		border: 1px solid #eaeaea;
 		background-color: #ffffff;
-		//margin-top: 20px;
-		padding: 19px 54px;
+		padding: 16px 53px;
+		&_log {
+			padding: 16px 66.5px;
+		}
 		&:hover {
 			color: #ef5b70;
 			border: 1px solid #ef5b70;
@@ -331,6 +337,23 @@ a.register__link {
 			height: 45px;
 			border: 1px solid #eaeaea;
 			background-color: #ffffff;
+			padding-left: 28px;
+			opacity: 0.67;
+			color: #222224;
+			font-size: 14px;
+			font-weight: 400;
+			letter-spacing: 0.35px;
+			&:focus {
+				padding-left: 28px;
+				opacity: 0.67;
+				color: #222224;
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 54px;
+				letter-spacing: 0.35px;
+				background-color: #f0a8b1;
+				color: white;
+			}
 		}
 	}
 	&-password {
@@ -360,6 +383,23 @@ a.register__link {
 			height: 45px;
 			border: 1px solid #eaeaea;
 			background-color: #ffffff;
+			padding-left: 28px;
+			opacity: 0.67;
+			color: #222224;
+			font-size: 14px;
+			font-weight: 400;
+			letter-spacing: 0.35px;
+			&:focus {
+				padding-left: 28px;
+				opacity: 0.67;
+				color: #222224;
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 54px;
+				letter-spacing: 0.35px;
+				background-color: #f0a8b1;
+				color: white;
+			}
 		}
 	}
 }
@@ -375,15 +415,8 @@ a.register__link {
 }
 
 .log-in__btn {
-	//display: inline-block;
-	//color: #4a4a4a;
-	//font-size: 14px;
-	//font-weight: 700;
-	//text-align: left;
-	//text-transform: uppercase;
-	//border: 1px solid #eaeaea;
-	//background-color: #ffffff;
-	margin-top: 49px;
+	margin-top: 25px;
+
 }
 
 .forgot-text {
