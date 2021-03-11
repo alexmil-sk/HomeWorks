@@ -33,24 +33,101 @@
 						</div>
 					</div>
 					<!-- ! </NEW ARRIVALS>----------------------------------------------------------- -->
-					<!-- ! <VIDEO> -->
-						<div class="container-shop">
-							<div class="player">
-								<iframe width="100%" height="640px" src="https://www.youtube.com/embed/LaJi1_F7g10" frameborder="0"
-									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-									allowfullscreen>
-								</iframe>
-							</div>
-						</div>
-						
-					<!-- ! </VIDEO> -->
-					<!-- ! <PRODUCT DETAILS>----------------------------------------------------------- -->
+					<!-- ! <VIDEO> --------------------------------------------------------------------->
 					<div class="container-shop">
-						<div class="product-details">
-
+						<div class="player">
+							<iframe width="100%" height="640px" src="https://www.youtube.com/embed/LaJi1_F7g10" frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen>
+							</iframe>
 						</div>
-						<!-- ! </PRODUCT DETAILS>----------------------------------------------------------- -->
-						<!-- ! <SHIPPING ADRESS - COUPON DISCOUNT>-------------------------------------------->
+					</div>
+						
+					<!-- ! </VIDEO> -------------------------------------------------------------------->
+					<!-- ! <GRID PRODUCT DETAILS> ------------------------------------------------------>
+					<div class="container-shop">
+						<form id=[product_table] action="#">
+							<div class="grid">
+								<div class="grid__table">
+											<div class="grid__item_hd">Product Details</div>
+											<div class="grid__item_hd center-h">unite Price</div>
+											<div class="grid__item_hd center-h">Quantity</div>
+											<div class="grid__item_hd center-h">shipping</div>
+											<div class="grid__item_hd center-h">Subtotal</div>
+											<div class="grid__item_hd center-h">ACTION</div>
+										<!-- ! <row 1> -->
+											<div class="grid__item">
+												<div class="product__row">
+													<img src="img/shopping-cart/table/table_1.jpg" alt="table_1">
+													<div class="product__content">
+														<h4 class="product__title">Mango People T-shirt</h4>
+														<p class="product__text">Color:<span>Red</span></p>
+														<p class="product__text">Size:<span>Xll</span></p>
+													</div>
+												</div>
+											</div>
+											<div class="grid__item grid__item_2">&#36;150</div>
+											<div class="grid__item grid__item_3"><input type="text" name="quantity" id="quantity-1" placeholder="2"></div>
+											<div class="grid__item grid__item_4">FREE</div>
+											<div class="grid__item grid__item_5">&#36;300</div>
+											<div class="grid__item grid__item_6">
+												<button class="reset_prod" type="reset" name="reset_prod" formtarget="_self">
+													<img src="img/shopping-cart/table/icon_x.jpg" alt="icon_x">
+												</button>
+											</div>
+										<!-- ! </row 1> -->
+										<!-- ! <row 2> -->
+										<div class="grid__item">
+											<div class="product__row">
+												<img src="img/shopping-cart/table/table_2.jpg" alt="table_2">
+												<div class="product__content">
+													<h4 class="product__title">Mango People T-shirt</h4>
+													<p class="product__text">Color:<span>Red</span></p>
+													<p class="product__text">Size:<span>Xll</span></p>
+												</div>
+											</div>
+										</div>
+										<div class="grid__item grid__item_2">&#36;150</div>
+										<div class="grid__item grid__item_3"><input type="text" name="quantity" id="quantity-2" placeholder="2"></div>
+										<div class="grid__item grid__item_4">FREE</div>
+										<div class="grid__item grid__item_5">&#36;300</div>
+										<div class="grid__item grid__item_6">
+											<button class="reset_prod" type="reset" name="reset_prod" formtarget="_self">
+												<img src="img/shopping-cart/table/icon_x.jpg" alt="icon_x">
+											</button>
+										</div>
+										<!-- ! </row 2> -->
+										<!-- ! <row 3> -->
+										<div class="grid__item">
+											<div class="product__row">
+												<img src="img/shopping-cart/table/table_3.jpg" alt="table_3">
+												<div class="product__content">
+													<h4 class="product__title">Mango People T-shirt</h4>
+													<p class="product__text">Color:<span>Red</span></p>
+													<p class="product__text">Size:<span>Xll</span></p>
+												</div>
+											</div>
+										</div>
+										<div class="grid__item grid__item_2">&#36;150</div>
+										<div class="grid__item grid__item_3"><input type="text" name="quantity" id="quantity-3" placeholder="2"></div>
+										<div class="grid__item grid__item_4">FREE</div>
+										<div class="grid__item grid__item_5">&#36;300</div>
+										<div class="grid__item grid__item_6">
+											<button class="reset_prod" type="reset" name="reset_prod" formtarget="_self">
+												<img src="img/shopping-cart/table/icon_x.jpg" alt="icon_x">
+											</button>
+										</div>
+										<!-- ! </row 3> -->
+								</div>
+							</div>
+							<div class="button__row">
+								<button class="table_reset" type="reset" name="table_reset" formtarget="_self">CLEAR SHOPPING CART</button>
+								<a href="#" class="shopping__link">CONTINUE sHOPPING</a>
+							</div>
+						</form>
+
+						<!-- ! </GRID PRODUCT DETAILS>--------------------------------------------------->
+						<!-- ! <SHIPPING ADRESS - COUPON DISCOUNT>--------------------------------------->
 						<div class="shipping-coupon">
 							<div class="shipping-coupon__row">
 								<!-- ! LEFT-->
@@ -67,12 +144,11 @@
 														<option class="bangladesh-option" value="france">France</option>
 														<option class="bangladesh-option" value="choose country">Choose country</option>
 													</select>
-
 												</div>
 												<input id="country" type="text" name="country" pattern="^[А-Яа-яЁё\s]+$" placeholder="State" required>
 												<input id="postcode" type="number" name="postcode" pattern="[0-9]{6}" placeholder="Postcode/Zip" required>
 												<div class="quote__btn">
-													<a href="#" class="quote__link">get a quote</a>
+													<button type="submit" href="#" class="quote__link" name="quote__link" formtarget="_self">get a quote</button>
 												</div>
 											</fieldset>
 										</form>
@@ -81,27 +157,26 @@
 								<!-- ! CENTER-->
 								<div class="shipping-coupon__center">
 									<div class="shipping-coupon__center-row">
-										<div class="shipping-coupon__center-title">coupon discount</div>
-										<div class="shipping-coupon__center-text">Enter your coupon code if you have one</div>
+										<div class="shipping-coupon__title center__title">coupon discount</div>
+										<div class="shipping-coupon__text">Enter your coupon code if you have one</div>
 										<form action="#">
 											<fieldset>
-												<div class="state">
-													<input id="state" type="text" name="state" placeholder="State" required>
-												</div>
+												<input id="state" type="text" name="state" pattern="^[А-Яа-яЁё\s]+$" placeholder="State" required>
 												<div class="apply-coupon__btn">
-													<button type="submit" href="#" class="apply-coupon__link">Apply coupon</button>
+													<button type="submit" href="#" class="apply-coupon__link" name="apply-coupon__link" formtarget="_self">Apply coupon</button>
 												</div>
 											</fieldset>
 										</form>
 									</div>
 								</div>
 								<!-- ! RIGHT-->
-								<div class="shipping-coupon__center">
-									<div class="shipping-coupon__center-row">
-										<p class="subTotal">Sub total $900</p>
+								<div class="shipping-coupon__right">
+									<div class="shipping-coupon__right-row">
+										<p class="subTotal">Sub total <span>$900</span></p>
 										<p class="grandTotal">GRAND TOTAL <span>$900</span></p>
-										<div class="apply-coupon__btn">
-											<button type="submit" href="#" class="proceed__link">proceed to checkout</button>
+										<hr class="hr__right">
+										<div class="proceed__btn">
+											<a type="submit" href="checkout.html" class="proceed__link" name="proceed__link" formtarget="_self">proceed to checkout</a>
 										</div>
 									</div>
 								</div>
