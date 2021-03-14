@@ -3,6 +3,7 @@
 	max-width: 100%;
 	padding-top: 109px;
 	padding-bottom: 90px;
+	background-color: #ffffff;
 	&-row {
 		@include flexbox();
 		justify-content: space-between;
@@ -17,43 +18,42 @@
 	}
 }
 
+.brand__logo {
+	display: inline-block;
+}
 
-.brand__description-items {
+.logo {
 	@include flexbox();
-	position: relative;
-	img {
-		margin-right: 13px;
-		height: 100%;
-		&:hover {
-			box-shadow: 0 0px 15px rgba(241, 99, 99, 0.8);
-			border-radius: 15px;
-		}
-		&:active {
-			box-shadow: 0 0px 5px rgba(36, 0, 241, 0.8);
-		}
+	margin-right: 13px;
+	height: 100%;
+	&:hover {
+		box-shadow: 0 0px 15px rgba(241, 99, 99, 0.8);
+		border-radius: 15px;
 	}
-
-	.brand-name {
+	&:active {
+		box-shadow: 0 0px 5px rgba(36, 0, 241, 0.8);
+	}
+	.brand {
 		color: #222222;
 		font-size: 27px;
 		font-weight: 300;
 		line-height: 32px;
-		//text-align: center;
 		text-transform: uppercase;
 		font-family: "Lato Light";
 		letter-spacing: 0.68px;
-		padding: 12px 0 5px 0;
+		padding: 8px 0 0 12px;
+		align-self: center;
+		/*
 		&:hover {
 			text-shadow: 0 0px 15px rgba(241, 99, 99, 0.8);
 			font-weight: 700;
 		}
-
 		&:active {
 			text-shadow: 0 0px 5px rgba(36, 0, 241, 0.8);
 			font-weight: 300;
 		}
+		*/
 	}
-
 	.letter {
 		color: #f16d7f;
 		font-family: Lato;
@@ -62,7 +62,6 @@
 		margin-right: 37px;
 		;
 	}
-
 }
 
 .brand__description-text {

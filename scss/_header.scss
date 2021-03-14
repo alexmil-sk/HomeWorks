@@ -14,7 +14,8 @@
 		@include flexbox();
 		align-items: center;
 		position: relative;
-		img {
+		.logo {
+			@include flexbox();
 			margin-right: 13px;
 			height: 100%;
 			&:hover {
@@ -34,7 +35,9 @@
 			text-transform: uppercase;
 			font-family: "Lato Light";
 			letter-spacing: 0.68px;
-			padding: 12px 0 5px 0;
+			padding: 8px 0 0 12px;
+			align-self: center;
+			/*
 			&:hover {
 				text-shadow: 0 0px 15px rgba(241, 99, 99, 0.8);
 				font-weight: 700;
@@ -43,6 +46,7 @@
 				text-shadow: 0 0px 5px rgba(36, 0, 241, 0.8);
 				font-weight: 300;
 			}
+			*/
 		}
 		.letter {
 			color: #f16d7f;
@@ -130,22 +134,19 @@ summary::-webkit-details-marker {
 }
 
 summary::after {
-	content: '\25B6';
+	//content: '\25B6';
+	content: '\25BC';
 	padding-right: 0.5em;
+	padding-left: 0.5em;
 	transform: rotate(90deg);
+	color: #969696;
 }
 
 details[open] > summary::after {
 	content: '\25BC';
 	color: red;
-	padding-left: 6px;
-	padding-right: 6px;
-}
-
-summary::after {
-	content: '\25B6';
+	padding-right: 0.5em;
 	padding-left: 0.5em;
-	color: #969696;
 }
 
 summary::before {

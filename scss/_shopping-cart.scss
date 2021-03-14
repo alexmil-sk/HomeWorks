@@ -28,7 +28,6 @@ form #product_table {
 	grid-template: 33px repeat(3, 162px) / 3fr repeat(5, 1fr);
 	justify-items: stretch;
 	align-items: stretch;
-
 }
 
 .grid__item_hd {
@@ -85,6 +84,7 @@ form #product_table {
 .grid__item {
 	padding: 22px 0;
 	border-bottom: 1px solid #eaeaea;
+
 }
 
 .grid__item_2,
@@ -97,11 +97,13 @@ form #product_table {
 	text-align: center;
 	line-height: 13px;
 	padding-top: 71px;
+	//margin: auto;
 }
 
 .grid__item_3 {
 	padding-top: 62px;
 	text-align: center;
+	//margin: auto;
 	input {
 		width: 54px;
 		height: 30px;
@@ -281,6 +283,9 @@ form #product_table {
 		letter-spacing: 0.35px;
 		background-color: #f0a8b1;
 		color: white;
+		&::placeholder {
+			color:transparent;
+		}
 	}
 }
 
@@ -363,6 +368,9 @@ form #product_table {
 		letter-spacing: 0.35px;
 		background-color: #f0a8b1;
 		color: white;
+		&::placeholder {
+			color: transparent;
+		}
 	}
 }
 

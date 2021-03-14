@@ -52,6 +52,7 @@ body {
 @import "_single_item";
 @import "_checkout";
 @import "_shopping-cart";
+@import "_product";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================================================
 
 .mainPage {
@@ -276,18 +277,14 @@ body {
 	position: relative;
 	margin-right: 30px;
 	margin-bottom: 39px;
-
 	&:nth-child(4n) {
 		margin-right: 0;
 	}
-
 	&:hover {
 		box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
-
 		.single__link_img {
 			filter: brightness(50%);
 		}
-
 		.addToCart {
 			display: flex;
 		}
@@ -300,7 +297,6 @@ body {
 	display: block;
 	width: 263px;
 	height: 364px;
-
 	&_img {
 		width: 100%;
 	}

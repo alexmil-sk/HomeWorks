@@ -382,19 +382,41 @@
 	&__gallery {
 		&_row {
 			display: flex;
+			flex-wrap: wrap;
+			width: 100%;
 		}
 		&_item {
-			padding-bottom: 21px;
+			max-width: 261px;
+			height: 364px;
 			margin-right: 31px;
+			position: relative;
+			&:nth-child(4n) {
+				margin-right: 0;
+			}
 			&:last-child {
 				margin-right: 0;
+			}
+			&:hover { //ВНИМАНИЕ!!! ОСНОВНЫЕ СТИЛИ ССЫЛОК НА INDEX.HTML / STYLE>SCSS 
+				box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+
+				.single__link img {	//ВНИМАНИЕ!!! ОСНОВНЫЕ СТИЛИ ССЫЛОК НА INDEX.HTML / STYLE>SCSS
+					filter: brightness(50%);
+				}
+				.addToCart { //ВНИМАНИЕ!!! ОСНОВНЫЕ СТИЛИ ССЫЛОК НА INDEX.HTML / STYLE>SCSS
+					display: flex;
+				}
 			}
 		}
 	}
 }
 
+.single__link img { //ВНИМАНИЕ!!! ОСНОВНЫЕ СТИЛИ ССЫЛОК НА INDEX.HTML / STYLE>SCSS
+		width: 100%;
+}
+
 .likeAlso__item_2 {
 	margin-top: -12px;
+
 }
 
 .likeAlso-item-text {
