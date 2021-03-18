@@ -15,24 +15,9 @@
 
 					<!-- @import "html/header_menu.html" -->
 				<div class="content">
-					<!-- ! <NEW ARRIVALS>----------------------------------------------------------- -->
-					<div class="newArrivals">
-						<div class="container-shop">
-							<div class="newArrivals__row">
-								<div class="newArrivals__title">New Arrivals</div>
-								<!-- ! -->
-								<div class="newArrivals__breadcrumbs">
-									<ul class="breadcrumb">
-										<li class="breadcrumb__list"><a class="breadcrumb__link" href="index.html">Home</a></li>
-										<li class="breadcrumb__list"><a class="breadcrumb__link" href="#">Men</a></li>
-										<li class="breadcrumb__list active">New Arrivals</li>
-									</ul>
-								</div>
-								<!-- ! -->
-							</div>
-						</div>
-					</div>
-					<!-- ! </NEW ARRIVALS>----------------------------------------------------------- -->
+					
+					<!-- @import "html/new-arrivals.html" -->
+
 					<!-- ! <GRID PRODUCT>----------------------------------------------------------- -->
 					<div class="container-shop">
 						<div class="product-grid">
@@ -125,10 +110,11 @@
 							<section class="product-content">
 								<!-- ? <PRODUCT CONTENT HEAD>   -->
 								<div class="product-content__head">
+									<!-- TRENDING -->
 									<div class="head__item head__item_trending">
 										<h2 class="head__item-title">Trending now</h2>
 										<ul class="trending__list">
-											<li ><a href="#" class="trending__link ">Bohemian</a></li>
+											<li><a href="#" class="trending__link ">Bohemian</a></li>
 											<li><a href="#" class="trending__link">Floral</a></li>
 											<li><a href="#" class="trending__link">Lace</a></li>
 											<li><a href="#" class="trending__link">Floral</a></li>
@@ -136,6 +122,7 @@
 											<li><a href="#" class="trending__link">Bohemian</a></li>
 										</ul>
 									</div>
+									<!-- SIZE -->
 									<div class="head__item head__item_size">
 										<h2 class="head__item-title">Size</h2>
 										<div class="size-content">
@@ -169,10 +156,11 @@
 											</div>
 										</div>
 									</div>	
+									<!-- PRICE -->
 									<div class="head__item head__item_price">
 										<h2 class="head__item-title">Price</h2>
 										<div class="price-content">
-											<input type="range" name="price-range" min="10" max="100" value="70" id="price-range">
+											<input type="range" class="range" name="price-range" min="0" max="100" value="50" id="price-range" multiple >
 											<span class="price-price price-price-1">&#36;52</span>
 											<span class="price-price price-price-2">&#36;400</span>
 										</div>
@@ -387,8 +375,9 @@
 								<!-- ? <PRODUCT CONTENT FOOT>   -->
 								<div class="product-content__foot">
 									<div class="product-foot__row">
-										<div class="product-foot__slider ">
-											<ul class="product-foot__list icon-ctrl-1">
+										<div class="product-foot__slider">
+											<div class="icon-ctrl-1"></div>
+											<ul class="product-foot__list">
 												<li class="product-foot__link product-foot__link_active">1</li>
 												<li class="product-foot__link">2</li>
 												<li class="product-foot__link">3</li>
@@ -398,6 +387,7 @@
 												<li class="product-foot__link">....</li>
 												<li class="product-foot__link">20</li>
 											</ul>
+											<div class="icon-ctrl-2"></div>
 										</div>
 										<a href="#" class="product-foot__button">View All</a>
 									</div>
@@ -446,14 +436,12 @@
 						</div>
 					</div>
 					<!-- ! </PRODUCT BLACK BLOCK GRID>----------------------------------------------------------- -->
-
-
-
 				</div>
+
 						<!-- @import "html/subscribe.html" -->
 
 						<!-- @import "html/brand.html" -->
-						
+
 						<!-- @import "html/footer.html" -->
 			</main>
 		</div>

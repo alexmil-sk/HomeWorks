@@ -222,6 +222,10 @@ summary::before {
 		&:hover {
 			color: #ef5b70;
 		}
+		&:active {
+			color: #ef5b70;
+			font-weight: 700;
+		}
 	}
 }
 

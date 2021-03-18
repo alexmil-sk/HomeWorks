@@ -8,7 +8,6 @@
 	height: 777px;
 	border: 1px solid #eaeaea;
 	background-color: #f7f7f7;
-	//background-color: red;
 	img {
 		max-height: 724px;
 		margin: 0 auto;
@@ -27,8 +26,26 @@
 			transform: rotate(90deg);
 			padding-top: 18px;
 		}
+		&:hover {
+			background-color: #D8D8D8;
+			border: 1px solid #000;
+		}
+		&:active {
+			background-color: #6c6c6c;
+			border: none;
+		}
 	}
 }
+
+.icon-ctrl:hover::before {
+	color: #000;
+}
+
+.icon-ctrl:active::before {
+	color: #ffffff;
+}
+
+
 //</MAIN SCREEN>==========================================
 
 //<MOSCHINO CHEAP AND CHICK>==========================================
@@ -124,7 +141,6 @@
 	width: 100%;
 	border-bottom: 1px solid #eaeaea;
 	padding-bottom: 44px;
-	//flex: 1 1 auto;
 	&-title {
 		color: #4d4d4d;
 		font-size: 18px;
@@ -166,7 +182,6 @@
 }
 
 .moschino__designer-content {
-	//width: 50%;
 	color: #b9b9b9;
 	font-size: 14px;
 	font-weight: 700;
