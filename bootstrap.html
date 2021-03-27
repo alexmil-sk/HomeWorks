@@ -10,9 +10,11 @@
 	<link rel="stylesheet" href="css/bootstrap-my.css">
 	<link rel="stylesheet" href="css/style.css">
    <title>Bootstrap Page</title>
-  </head>
-  <body>
+	</head>
+	<body>
 	<div class="wrapper-bs">
+			<div class="menu-fix">
+			
 <header class="header">
 	<div class="container-shop">
 		<div class="header__row">
@@ -24,7 +26,7 @@
 						</div>
 					</a>
 					<details class="header__browse-link">
-						<summary>Browse</summary>
+						<summary><span>Browse</span></summary>
 						<div class="cascade-browse">
 							<div class="cascade-browse__row">
 								<div class="cascade-browse__item">
@@ -133,46 +135,53 @@
 			</div>
 		</div>
 	</div>
-</header>		<div class="container">
-			<!-- ! <MENU> -->
-			<nav class="navbar navbar-expand-lg navbar-light-w bg-light-blue margin">
-				<div class="container-fluid">
-					<a class="navbar-brand" href="#">BRAND</a>
-					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-						aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="collapse navbar-collapse" id="navbarSupportedContent">
-						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-							<li class="nav-item">
-								<a class="nav-link active" aria-current="page" href="index.html">Home</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="single_item.html">Single Item</a>
-							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-									aria-expanded="false">
-									Shopping
-								</a>
-								<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-									<li><a class="dropdown-item" href="checkout.html">Checkout</a></li>
-									<li><a class="dropdown-item" href="shopping-cart.html">Go To Cart</a></li>
-									<li>
-										<hr class="dropdown-divider">
+</header>			
+				<!-- ! <MENU> -->
+				<div class="container-shop">
+					<nav class="navbar navbar-expand-lg navbar-light-w bg-light-blue margin">
+						<div class="container-fluid">
+							<a class="navbar-brand" href="index.html">BRAND</a>
+							<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+								aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+								<span class="navbar-toggler-icon"></span>
+							</button>
+							<div class="collapse navbar-collapse" id="navbarSupportedContent">
+								<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+									<li class="nav-item">
+										<a class="nav-link active" aria-current="page" href="index.html">Home</a>
 									</li>
-									<li><a class="dropdown-item" href="#">Something else here</a></li>
+									<li class="nav-item">
+										<a class="nav-link" href="single_item.html">Single Item</a>
+									</li>
+									<li class="nav-item dropdown">
+										<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+											aria-expanded="false">
+											Shopping
+										</a>
+										<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+											<li><a class="dropdown-item" href="checkout.html">Checkout</a></li>
+											<li><a class="dropdown-item" href="shopping-cart.html">Go To Cart</a></li>
+											<li><a class="dropdown-item" href="product.html">Products</a></li>
+											<li><a class="dropdown-item" href="canvas.html">Canvas</a></li>
+											<li>
+												<hr class="dropdown-divider">
+											</li>
+											<li><a class="dropdown-item" href="#">Something else here</a></li>
+										</ul>
+									</li>
 								</ul>
-							</li>
-						</ul>
-						<form class="d-flex">
-							<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-							<button class="btn btn-outline-success" type="submit">Search</button>
-						</form>
-					</div>
+								<form class="d-flex">
+									<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+									<button class="btn btn-outline-success" type="submit">Search</button>
+								</form>
+							</div>
+						</div>
+					</nav>
 				</div>
-			</nav>
-			<!-- ! </MENU> -->
+				<!-- ! </MENU> -->
+			</div>
+			<div class="head-empty-bootstrap"></div>
+		<div class="container-shop">
 
 			<!-- ! <SLIDER> -->
 			<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -293,7 +302,7 @@
 		<div class="container-shop">
 			<div class="subscribe__flex">
 				<div class="subscribe__item-left">
-							<img src="img/index/subscribe_face.png" alt="subscribe_face">
+							<img src="img/subscribe/subscribe_face.png" alt="subscribe_face">
 						<div class="left__content">
 							<p class="italic">“Vestibulum quis porttitor dui! Quisque viverra nunc mi,
 								a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”</p>
@@ -354,42 +363,46 @@
 					</div>
 				</div>
 			</div>
-			<div class="brand__menu company">
-				<div class="brand__menu-row">
-					<div class="brand__menu-title">COMPANY</div>
-					<ul class="brand__menu-items">
-						<li class="brand__menu-list"><a href="#" class="brand__menu-link">Home</a></li>
-						<li class="brand__menu-list"><a href="#" class="brand__menu-link">Shop</a></li>
-						<li class="brand__menu-list"><a href="#" class="brand__menu-link">About</a></li>
-						<li class="brand__menu-list"><a href="#" class="brand__menu-link">How It Works</a></li>
-						<li class="brand__menu-list"><a href="#" class="brand__menu-link">Contact</a></li>
-					</ul>
-				</div>
-			</div>
-			<!--  -->
-			<div class="brand__menu information">
-				<div class="brand__menu-row">
-					<div class="brand__menu-title">INFORMATION</div>
-					<ul class="brand__menu-items">
-						<li class="brand__menu-list"><a href="#" class="brand__menu-link">Tearms & Condition</a></li>
-						<li class="brand__menu-list"><a href="#" class="brand__menu-link">Privacy Policy</a></li>
-						<li class="brand__menu-list"><a href="#" class="brand__menu-link">How to Buy</a></li>
-						<li class="brand__menu-list"><a href="#" class="brand__menu-link">How to Sell</a></li>
-						<li class="brand__menu-list"><a href="#" class="brand__menu-link">Promotion</a></li>
-					</ul>
-				</div>
-			</div>
-			<!--  -->
-			<div class="brand__menu category">
-				<div class="brand__menu-row">
-					<div class="brand__menu-title">SHOP CATEGORY</div>
-					<ul class="brand__menu-items">
-						<li class="brand__menu-list"><a href="#" class="brand__menu-link">Men</a></li>
-						<li class="brand__menu-list"><a href="#" class="brand__menu-link">Women</a></li>
-						<li class="brand__menu-list"><a href="#" class="brand__menu-link">Child</a></li>
-						<li class="brand__menu-list"><a href="#" class="brand__menu-link">Apparel</a></li>
-						<li class="brand__menu-list"><a href="#" class="brand__menu-link">Brows All</a></li>
-					</ul>
+			<div class="brand-columns">
+				<div class="brand-columns__row">
+					<div class="brand__menu company">
+						<div class="brand__menu-row">
+							<div class="brand__menu-title">COMPANY</div>
+							<ul class="brand__menu-items">
+								<li class="brand__menu-list"><a href="#" class="brand__menu-link">Home</a></li>
+								<li class="brand__menu-list"><a href="#" class="brand__menu-link">Shop</a></li>
+								<li class="brand__menu-list"><a href="#" class="brand__menu-link">About</a></li>
+								<li class="brand__menu-list"><a href="#" class="brand__menu-link">How It Works</a></li>
+								<li class="brand__menu-list"><a href="#" class="brand__menu-link">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+					<!--  -->
+					<div class="brand__menu information">
+						<div class="brand__menu-row">
+							<div class="brand__menu-title">INFORMATION</div>
+							<ul class="brand__menu-items">
+								<li class="brand__menu-list"><a href="#" class="brand__menu-link">Tearms & Condition</a></li>
+								<li class="brand__menu-list"><a href="#" class="brand__menu-link">Privacy Policy</a></li>
+								<li class="brand__menu-list"><a href="#" class="brand__menu-link">How to Buy</a></li>
+								<li class="brand__menu-list"><a href="#" class="brand__menu-link">How to Sell</a></li>
+								<li class="brand__menu-list"><a href="#" class="brand__menu-link">Promotion</a></li>
+							</ul>
+						</div>
+					</div>
+					<!--  -->
+					<div class="brand__menu category">
+						<div class="brand__menu-row">
+							<div class="brand__menu-title">SHOP CATEGORY</div>
+							<ul class="brand__menu-items">
+								<li class="brand__menu-list"><a href="#" class="brand__menu-link">Men</a></li>
+								<li class="brand__menu-list"><a href="#" class="brand__menu-link">Women</a></li>
+								<li class="brand__menu-list"><a href="#" class="brand__menu-link">Child</a></li>
+								<li class="brand__menu-list"><a href="#" class="brand__menu-link">Apparel</a></li>
+								<li class="brand__menu-list"><a href="#" class="brand__menu-link">Brows All</a></li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -404,7 +417,7 @@
 	<div class="container-shop">
 		<div class="footer__row">
 			<div class="footer__left">
-					&copy; 2017 Brand All Rights Reserved.
+					&copy; 2017 Brand All&nbsp;Rights&nbsp;Reserved.
 			</div>
 			<div class="footer__right">
 				<div class="footer__right-row">

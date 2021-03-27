@@ -2,12 +2,12 @@
 .newArrivals {
 	height: 148px;
 	background-color: #f8f3f4;
+	margin-top: 51px;
 
 	&__row {
 		@include flexbox();
 		justify-content: space-between;
 		padding: 65px 0;
-		//align-items: center;
 	}
 
 	&__title {
@@ -22,6 +22,17 @@
 	&__breadcrumbs {}
 }
 
+@media (max-width: 500px) {
+	.newArrivals {
+		&__row {
+			flex-direction: column;
+			align-items: center;
+		}
+		&__title {
+			margin-bottom: 20px;
+		}
+	}
+}
 //<BREADCRUMB>--------------------
 
 .breadcrumb>li+li:before {

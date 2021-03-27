@@ -1,25 +1,35 @@
 .brand__footer {
-	height: 460px;
+	min-height: 460px;
 	max-width: 100%;
 	padding-top: 109px;
 	padding-bottom: 90px;
 	background-color: #ffffff;
 	&-row {
 		@include flexbox();
-		justify-content: space-between;
-
 	}
 }
+
+
+@media (max-width: 1000px) {
+	.brand__footer {
+		padding-top: 70px;
+		padding-bottom: 45px;
+		&-row {
+			flex-direction: column;
+		}
+	}
+}
+
 .brand__description {
 	flex: 0 1 40%;
-	&__description-row {
+	&-row {
 		@include flexbox();
 		flex-direction: column;
 	}
 }
 
 .brand__logo {
-	display: inline-block;
+	display: inline-flex;
 }
 
 .logo {
@@ -43,16 +53,6 @@
 		letter-spacing: 0.68px;
 		padding: 8px 0 0 12px;
 		align-self: center;
-		/*
-		&:hover {
-			text-shadow: 0 0px 15px rgba(241, 99, 99, 0.8);
-			font-weight: 700;
-		}
-		&:active {
-			text-shadow: 0 0px 5px rgba(36, 0, 241, 0.8);
-			font-weight: 300;
-		}
-		*/
 	}
 	.letter {
 		color: #f16d7f;
@@ -79,16 +79,36 @@
 	}
 }
 
+.brand-columns {
+	flex: 0 1 60%;
+	&__row {
+		@include flexbox();
+		justify-content: space-between;
+	}
+}
+
+@media (max-width: 1000px) {
+	.brand-columns {
+		padding-top: 15px;
+	}
+}
+
+@media (max-width: 550px) {
+	.brand-columns {
+		&__row {
+			flex-direction: column;
+		}
+	}
+}
+
+
 .brand__menu {
-	flex: 0 1 20%;
+	flex: 0 1 100%;
 	height: 100%;
+	padding-left: 37px;
 	&-row {
 		@include flexbox();
 		flex-direction: column;
-		padding-left: 40px;
-		
-		
-
 	}
 	&-title {
 		color: #f16d7f;
@@ -122,5 +142,11 @@
 			color: #ef5b70;
 			font-weight: 700;
 		}
+	}
+}
+
+@media (max-width: 1000px) {
+	.brand__menu {
+		padding-left: 0;
 	}
 }
