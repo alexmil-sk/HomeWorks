@@ -17,17 +17,17 @@ form #product_table {
 }
 
 .grid {
-	//background-color: #cccccc;
 	position: relative;
 	margin-bottom: 44px;
-
 }
 
-.grid__table {
-	display: grid;
-	grid-template: 33px repeat(3, 162px) / 3fr repeat(5, 1fr);
-	justify-items: stretch;
-	align-items: stretch;
+@media (min-width: 636px) {
+	.grid__table {
+		display: grid;
+		grid-template: 33px repeat(3, 162px) / 3fr repeat(5, 1fr);
+		justify-items: stretch;
+		align-items: stretch;
+	}
 }
 
 .grid__item_hd {
@@ -39,6 +39,12 @@ form #product_table {
 	text-transform: uppercase;
 	letter-spacing: -0.2px;
 	border-bottom: 1px solid #eaeaea;
+}
+
+@media (max-width: 636px) {
+	.grid__item_hd {
+		text-align: center;
+	}
 }
 
 .product__row {
@@ -71,13 +77,23 @@ form #product_table {
 	}
 }
 
+
+@media (max-width: 636px) {
+	.product__row {
+		@include flexbox();
+		align-items:center;
+		justify-content: center;
+	}
+}
+
 .center {
 	&-h {
 		text-align: center;
 	}
+
 	&-v {
-	justify-items: start;
-	align-items: stretch;
+		justify-items: start;
+		align-items: stretch;
 	}
 }
 
@@ -97,7 +113,6 @@ form #product_table {
 	text-align: center;
 	line-height: 13px;
 	padding-top: 71px;
-	//margin: auto;
 }
 
 .grid__item_3 {
@@ -136,6 +151,17 @@ form #product_table {
 	}
 }
 
+@media (max-width: 636px) {
+	.grid__item_2,
+	.grid__item_3,
+	.grid__item_4,
+	.grid__item_5,
+	.grid__item_6 {
+		padding-top: 22px;
+	}
+}
+
+
 .reset_prod {
 	&:hover {
 		transform: scale(1.5);
@@ -150,6 +176,13 @@ form #product_table {
 	justify-content: space-between;
 }
 
+@media (max-width: 500px) {
+	.button__row {
+		flex-direction: column;
+		align-items:center;
+	}
+}
+
 .table_reset {
 	color: #4a4a4a;
 	font-size: 14px;
@@ -160,6 +193,7 @@ form #product_table {
 	height: 50px;
 	border: 1px solid #eaeaea;
 	background-color: #ffffff;
+	margin-right: 20px;
 	&:hover {
 		color: #ef5b70;
 		border: 1px solid #ef5b70;
@@ -174,13 +208,21 @@ form #product_table {
 	}
 }
 
+@media (max-width: 500px) {
+	.table_reset {
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
+}
+
 .shopping__link {
 	color: #4a4a4a;
 	font-size: 14px;
 	font-weight: 700;
 	text-align: center;
 	text-transform: uppercase;
-	width: 225px;
+	//width: 225px;//?-ШИРИНА ПО МАКЕТУ. НО ПРИ RESPONSIVE ЛУЧШЕ КОГДА КНОПКИ РАВНЫ ПО ШИРИНЕ 235px
+	width: 235px;
 	height: 50px;
 	border: 1px solid #eaeaea;
 	background-color: #ffffff;
@@ -209,17 +251,41 @@ form #product_table {
 	width: 100%;
 	&__row {
 		@include flexbox();
+		flex-wrap: wrap;
 	}
 }
+
+@media (max-width: 1166px) {
+	.shipping-coupon {
+		&__row {
+			justify-content: space-around;
+		}
+	}
+}
+
 
 //<LEFT>-------------------------
 
 .shipping-coupon__left {
 	flex: 0 1 360px;
-	margin-right: 35px;
+	margin-right: 30px;
 	&-row {
 		@include flexbox();
 		flex-direction: column;
+	}
+}
+
+@media (max-width: 749px) {
+	.shipping-coupon__left {
+		margin-right: 0;
+	}
+}
+
+@media (max-width: 384px) {
+	.shipping-coupon__left {
+		&-row {
+			align-items: center;
+		}
 	}
 }
 
@@ -263,7 +329,17 @@ form #product_table {
 	}
 }
 
+@media (max-width: 384px) {
+	.bangladesh {
+		&__select {
+			width: 250px;
+			margin: 0 auto 23px;
+		}
+	}
+}
+
 #country, #postcode {
+	@include flexbox();
 	width: 355px;
 	height: 45px;
 	border: 1px solid #eaeaea;
@@ -296,8 +372,16 @@ form #product_table {
 	margin-bottom: 23px;
 }
 
+@media (max-width: 384px) {
+	#country,
+	#postcode {
+		width: 250px;
+	}
+}
+
 .quote {
 	&__btn {
+		@include flexbox();
 	}
 	&__link {
 		color: #4a4a4a;
@@ -323,15 +407,43 @@ form #product_table {
 	}
 }
 
+@media (max-width: 384px) {
+	.quote {
+		&__btn {
+			justify-content: center;
+		}
+	}
+}
+
 //</LEFT>-------------------------
 //<CENTER>-------------------------
 
 .shipping-coupon__center {
 	flex: 0 1 360px;
-	margin-right: 35px;
+	margin-right: 30px;
 	&-row {
 		@include flexbox();
 		flex-direction: column;
+	}
+}
+
+@media (max-width: 1166px) {
+	.shipping-coupon__center {
+		margin-right: 0;
+	}
+}
+
+@media (max-width: 779px) {
+	.shipping-coupon__center {
+		margin-top: 50px;
+	}
+}
+
+@media (max-width: 384px) {
+	.shipping-coupon__center {
+		&-row {
+			align-items: center;
+		}
 	}
 }
 
@@ -348,6 +460,7 @@ form #product_table {
 }
 
 #state {
+	@include flexbox();
 	width: 355px;
 	height: 45px;
 	border: 1px solid #eaeaea;
@@ -373,8 +486,15 @@ form #product_table {
 	}
 }
 
+@media (max-width: 384px) {
+	#state {
+		width: 250px;
+	}
+}
+
 .apply-coupon {
 	&__btn {
+		@include flexbox();
 	}
 	&__link {
 		color: #4a4a4a;
@@ -391,11 +511,18 @@ form #product_table {
 			box-shadow: inset 0 0 10px #ef5b70;
 			transition: all 0.3s ease;
 		}
-
 		&:active {
 			box-shadow: inset 0 0 5px #ef5b70;
 			color: #f761789a;
 			transition: all 0.3s ease;
+		}
+	}
+}
+
+@media (max-width: 384px) {
+	.apply-coupon {
+		&__btn {
+			justify-content: center;
 		}
 	}
 }
@@ -405,13 +532,22 @@ form #product_table {
 //<RIGHT>---------------------------
 
 .shipping-coupon__right {
+	@include flexbox();
 	flex: 0 1 360px;
-	height: 100%;
+	height: 214px;
 	background-color: #f5f3f3;
 	padding: 43px;
 	&-row {
+		width: 100%;
 		@include flexbox();
 		flex-direction: column;
+		justify-content: space-between;
+	}
+}
+
+@media (max-width: 1166px) {
+	.shipping-coupon__right {
+		margin-top: 50px;
 	}
 }
 
@@ -440,28 +576,40 @@ form #product_table {
 	}
 }
 
+@media (max-width: 282px) {
+	.grandTotal {
+		span {
+			margin-left: 14px;
+		}
+	}
+}
+
+
 .hr__right{
 	border: 1px solid #e2e2e2;
-	margin-bottom: 22px;
+	margin-bottom: 15px;
 }
 
 
 .proceed {
 	&__btn {
-		//height: 50px;
-		text-align: center;
-		//width: 100%;
-		margin-top: 20px;
-		margin-bottom: 20px;
+		@include flexbox();
+		height: 50px;
+		justify-content: center;
 	}
 	&__link {
+		@include flexbox();
+		width: 100%;
 		color: #ffffff;
 		font-size: 16px;
 		font-weight: 700;
-		text-align: left;
+		text-align: center;
 		text-transform: uppercase;
 		background-color: #f16d7f;
-		padding: 18px 40px;
+		justify-content: center;
+		align-items: center;
+		line-height: 20px;
+		//padding: 18px 40px;
 		&:hover {
 			color: #fff;
 			outline: 1px solid #ef5b70;

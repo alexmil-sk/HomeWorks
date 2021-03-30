@@ -98,21 +98,21 @@
 											<div class="cart__simple-rating-2">
 												<div class="cart__simple-rating-items">
 													<!-- ВНИМАНИЕ!!! Нумерация значений радио кнопок должна идти в обратном порядке -->
-													<input id="cart__simple-rating-5" type="radio" class="cart__simple-rating-item"
+													<input id="cart__simple-rating-10" type="radio" class="cart__simple-rating-item"
 														name="cart__simple-rating-2" value="5" checked>
-													<label for="cart__simple-rating-5" class="cart__simple-rating-label"></label>
-													<input id="cart__simple-rating-4" type="radio" class="cart__simple-rating-item"
+													<label for="cart__simple-rating-10" class="cart__simple-rating-label"></label>
+													<input id="cart__simple-rating-9" type="radio" class="cart__simple-rating-item"
 														name="cart__simple-rating-2" value="4">
-													<label for="cart__simple-rating-4" class="cart__simple-rating-label"></label>
-													<input id="cart__simple-rating-3" type="radio" class="cart__simple-rating-item"
+													<label for="cart__simple-rating-9" class="cart__simple-rating-label"></label>
+													<input id="cart__simple-rating-8" type="radio" class="cart__simple-rating-item"
 														name="cart__simple-rating-2" value="3">
-													<label for="cart__simple-rating-3" class="cart__simple-rating-label"></label>
-													<input id="cart__simple-rating-2" type="radio" class="cart__simple-rating-item"
+													<label for="cart__simple-rating-8" class="cart__simple-rating-label"></label>
+													<input id="cart__simple-rating-7" type="radio" class="cart__simple-rating-item"
 														name="cart__simple-rating-2" value="2">
-													<label for="cart__simple-rating-2" class="cart__simple-rating-label"></label>
-													<input id="cart__simple-rating-1" type="radio" class="cart__simple-rating-item"
+													<label for="cart__simple-rating-7" class="cart__simple-rating-label"></label>
+													<input id="cart__simple-rating-6" type="radio" class="cart__simple-rating-item"
 														name="cart__simple-rating-2" value="1">
-													<label for="cart__simple-rating-1" class="cart__simple-rating-label"></label>
+													<label for="cart__simple-rating-6" class="cart__simple-rating-label"></label>
 												</div>
 											</div>
 											<p class="item__price">1 x $250</p>
@@ -282,7 +282,11 @@
 					<!-- ! <MAIN SCREEN>----------------------------------------------------------- -->
 					<div class="mainScreen_single-item">
 						<a href="#" class="slider__arrow slider__arrow_l icon-ctrl"></a>
-						<img src="img/single_item/main_single_item.jpg" alt="main_single_item">
+						<div class="mainScreen__img">
+							<!-- 
+							<img src="img/single_item/main_single_item.jpg" alt="main_single_item">
+							-->
+						</div>
 						<a href="#" class="slider__arrow slider__arrow_r icon-ctrl"></a>
 					</div>
 					<!-- ! </MAIN SCREEN>----------------------------------------------------------- -->
@@ -320,7 +324,7 @@
 									<div class="moschino__choose">
 										<div class="moschino__choose-row">
 											<!-- ! -->
-											<div class="moschino__choose-color">
+											<div class="moschino__choose-color moschino__choose_item">
 												<div class="choose-color__title title">CHOOSE COLOR</div>
 												<input type="checkbox-color" class="checkbox-color" id="checkbox-color" />
 												<label for="checkbox-color"></label>
@@ -333,7 +337,7 @@
 												</select>
 											</div>
 											<!-- ! -->
-											<div class="moschino__choose-size">
+											<div class="moschino__choose-size moschino__choose_item"">
 												<div class="choose-size__title title">CHOOSE SIZE</div>
 												<select class="choose-size__select" id="choose-size" placeholder="your size">
 													<option value="XXL">XXL</option>
@@ -353,7 +357,8 @@
 									</div>
 									<div class="moschino-btn">
 										<div class="moschino-btn__row">
-											<div class="moschino-btn__logo"><img src="img/single_item/logo/basket_red.svg" alt="basket_black"></div>
+											<div class="moschino-btn__logo">
+											<img src="img/single_item/logo/basket_red.svg" alt="basket_black"></div>
 											<a href="#" class="moschino-btn__link">Add to Cart</a>
 										</div>
 									</div>
@@ -602,4 +607,4 @@
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/script.js"></script>
 	</body>
-<html>
+</html>
