@@ -1,0 +1,80 @@
+//<NEW ARRIVALS>==================================================================
+.newArrivals {
+	height: 148px;
+	background-color: #f8f3f4;
+	margin-top: 51px;
+
+	&__row {
+		@include flexbox();
+		justify-content: space-between;
+		padding: 65px 0;
+	}
+
+	&__title {
+		color: #f16d7f;
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 20px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	&__breadcrumbs {}
+}
+
+@media (max-width: 500px) {
+	.newArrivals {
+		&__row {
+			flex-direction: column;
+			align-items: center;
+		}
+		&__title {
+			margin-bottom: 20px;
+		}
+	}
+}
+//<BREADCRUMB>--------------------
+
+.breadcrumb>li+li:before {
+	padding: 0 5px;
+	color: #ccc;
+	content: "/\00a0";
+}
+
+.breadcrumb {
+	@include flexbox();
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 20px;
+	text-transform: uppercase;
+
+	&__list {
+		list-style: none;
+	}
+
+	&__link {
+		color: #636363;
+
+		&:hover {
+			color: #636363;
+			border-bottom: 2px solid #636363;
+		}
+
+		&:active {
+			font-weight: 700;
+			color: #f16d7f;
+			border-bottom: none;
+		}
+	}
+
+	.active {
+		font-weight: 700;
+		color: #f16d7f;
+	}
+}
+
+
+//</BREADCRUMB>--------------------
+
+
+//</NEW ARRIVALS>=================================================================

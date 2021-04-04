@@ -3,6 +3,7 @@
 	height: 100px;
 	padding: 25px 0;
 	border: 1px solid #ececec;
+	//background-color:red;
 	&__row {
 		}
 	&__flex {
@@ -14,7 +15,8 @@
 		@include flexbox();
 		align-items: center;
 		position: relative;
-		img {
+		.logo {
+			@include flexbox();
 			margin-right: 13px;
 			height: 100%;
 			&:hover {
@@ -34,15 +36,8 @@
 			text-transform: uppercase;
 			font-family: "Lato Light";
 			letter-spacing: 0.68px;
-			padding: 12px 0 5px 0;
-			&:hover {
-				text-shadow: 0 0px 15px rgba(241, 99, 99, 0.8);
-				font-weight: 700;
-			}
-			&:active {
-				text-shadow: 0 0px 5px rgba(36, 0, 241, 0.8);
-				font-weight: 300;
-			}
+			padding: 8px 0 0 12px;
+			align-self: center;
 		}
 		.letter {
 			color: #f16d7f;
@@ -93,63 +88,104 @@
 	&__right {
 		@include flexbox();
 		align-items: center;
-			img {
-				max-height: 29px;
-				&:hover {
-					box-shadow: 0 0px 15px rgba(241, 99, 99, 0.8);
-					border-radius: 2px;
-				}
-				&:active {
-					box-shadow: 0 0px 5px rgba(36, 0, 241, 0.8);
-				}
-			}
 	}
 }
-//<BROWSE>==============================================================================
-/*
-summary {
-	width: 150px;
-	height: 30px;
-	text-align: center;
-	border: 1px solid #000;
-	line-height: 30px;
+
+@media (max-width: 900px) {
+	.header {
+		.icon-search,
+		input {
+			//display: none;
+			position: absolute;
+			top: 250%;
+			left: 0;
+			z-index: 0;
+		}
+		.icon-search {
+			left: 316px;
+		}
+	}
 }
 
-summary::before {
+@media (max-width: 450px) {
+	.header {
+		&__right {
+			position: absolute;
+			top: 104px;
+			right: 15px;
+			z-index: 1;
+		}
+		&__left {
+			.logo {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+@media (max-width: 348px) {
+	.header {
+		&__input {
+			width: 250px;
+		}
+		.icon-search {
+			left: 249px;
+		}
+	}
+}
+
+//<BROWSE>==============================================================================
+
+.header__browse-link {
+		max-height: 38px;
+		color: #222222;
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 16px;
+		text-align: right;
+		letter-spacing: 0.35px;
+		padding: 10px 0px 12px 11px;
+		margin-top: 7px;
+		margin-bottom: 6px;
+		border-radius: 3px 0 0 3px;
+		border: 1px solid #e6e6e6;
+		background-color: #cdcdcc;
+		background-image: linear-gradient(to bottom, #f9f9f9 0%, #f5f5f5 100%);
+		position: relative;
+		&:hover {
+			cursor: pointer;
+			color: red;
+			border: 1px solid red;
+		}
+}
+
+@media (max-width: 550px) {
+	.header__browse-link {
+		padding: 0;
+	}
+}
+
+summary {
+	display: block;
+}
+
+summary::-webkit-details-marker {
 	display: none;
 }
 
-
 summary::after {
-	content: '\25B6';
+	//content: '\25B6';
+	content: '\25BC';
+	padding-right: 0.5em;
 	padding-left: 0.5em;
-	color: blue;
+	color: #969696;
 }
 
-/*
 details[open] > summary::after {
 	content: '\25BC';
-}
-*/
-
-//---------------------------------
-
-.header__link {
-	max-height: 38px;
-	color: #222222;
-	font-family: Lato;
-	font-size: 14px;
-	font-weight: 300;
-	line-height: 16px;
-	text-align: right;
-	letter-spacing: 0.35px;
-	padding: 10px 25px 12px 15px;
-	margin-top: 7px;
-	margin-bottom: 6px;
-	border-radius: 3px 0 0 3px;
-	border: 1px solid #e6e6e6;
-	background-color: #F5F5F5;
-	position: relative;
+	color: red;
+	padding-right: 0.5em;
+	padding-left: 0.5em;
 }
 
 summary::before {
@@ -157,23 +193,32 @@ summary::before {
 	display: none;
 }
 
+@media (max-width: 550px) {
+	summary {
+		font-size: 20px;
+		padding-top: 0.5em;
+		padding-bottom: 0.5em;
+		span{
+			display: none;
+		}
+	}
+}
 
-//<CASCADE BROWSE>---------------------------------------
 
-.cascade {
+//<BROWSE CASCADE>---------------------------------------
+
+.cascade-browse {
 	border: 2px solid #e8e8e8;
 	border-radius: 5px;
 	background-color: #ffffff;
-	padding: 20px 25px;
+	padding: 20px 13px;
 	position: absolute;
-	top: 27px;
-	left: -25px;
-	//display: none;
-
+	top: 38px;
+	left: 28.5px;
+	z-index: 2;
 	&__row {
-		@include flexbox();
+		//@include flexbox();
 	}
-
 	&:before {
 		content: "";
 		display: block;
@@ -186,18 +231,29 @@ summary::before {
 		position: absolute;
 		top: -7px;
 		left: 35px;
+		z-index: 10;
 	}
 }
 
-.cascade__item {
-	margin-right: 46px;
+@media (max-width: 550px) {
+	.cascade-browse {
+		top: 38px;
+		left: -533%;
+		&:before {
+			top: -7px;
+			left: 86.5%;
+		}
+	}
+}
 
+
+.cascade-browse__item {
+	//margin-right: 46px;
 	&:last-child {
 		margin-right: 0;
 	}
-
 	&-title {
-		width: 235px;
+		width: 236px;
 		color: #232323;
 		font-size: 14px;
 		line-height: 30px;
@@ -208,57 +264,308 @@ summary::before {
 		margin-bottom: 20px;
 		border-bottom: 1px solid #e8e8e8;
 	}
-
-	&-menu {}
-
 	&-list {
 		position: relative;
-
-		img {}
-
-		.super-sale {
-			display: inline-block;
-			width: 71px;
-			color: #ffffff;
-			font-size: 22px;
-			font-weight: 700;
-			line-height: 28px;
-			text-align: left;
-			text-transform: uppercase;
-			letter-spacing: 0.55px;
-			position: absolute;
-			bottom: 12px;
-			right: 6px;
-		}
 	}
-
 	li {
 		padding-bottom: 20px;
-
+		padding-left: 7px;
 		&:last-child {
-			padding-bottom: 0;
+			padding-bottom: 22px;
 		}
 	}
-
 	&-link {
 		color: #646464;
 		font-size: 14px;
 		font-weight: 400;
-		//line-height: 28px;
 		text-align: left;
 		letter-spacing: 0.35px;
 		display: block;
-
 		&:hover {
 			color: #ef5b70;
+		}
+		&:active {
+			color: #ef5b70;
+			font-weight: 700;
 		}
 	}
 }
 
-//</CASCADE>------------------------------------------
+@media (max-width: 550px) {
+	.cascade-browse__item {
+		li {
+			padding-bottom: 15px;
+			padding-left: 7px;
+
+			&:last-child {
+				padding-bottom: 15px;
+			}
+		}
+	}
+}
+
+@media (max-width: 280px) {
+	.cascade-browse {
+		padding: 0px 10px;
+	}
+	.cascade-browse__row {
+		//@include flexbox();
+	}
+
+	.cascade-browse__item {
+		&-title {
+			margin-bottom: 5px;
+		}
+		li {
+			padding-bottom: 5px;
+			padding-left: 7px;
+
+			&:last-child {
+				padding-bottom: 5px;
+			}
+		}
+	}
+}
+
+
+//</BROWSE CASCADE>------------------------------------------
 
 
 //</BROWSE>==============================================================================
+
+//<CART>==============================================================================
+
+//<CART IMG>---------------------------------------------
+.header__right {
+	.cart__img-1 {
+		max-height: 29px;
+		&-a {
+			padding-bottom: 50px;
+			opacity: 0.6;
+			&:hover {
+				cursor: pointer;
+				opacity: 0.4;
+			}
+			&:active {
+				opacity: 1;
+			}
+		}
+		
+	}
+}
+
+.cart__img-1 {
+	position: relative;
+	&:hover .cascade-cart {
+		display: block;
+	}
+}
+//</CART IMG>---------------------------------------------
+
+//<CART CASCADE>-------------------------------------
+
+//<CASCADE>-----------------------------
+
+.cascade-cart {
+	width: 262px;
+	border: 2px solid #e8e8e8;
+	border-radius: 5px;
+	background-color: #ffffff;
+	padding: 0 17px 20px 17px;
+	position: absolute;
+	top: 47px;
+	left: -16px;
+	z-index: 2;
+	display: none;
+	&__row {
+		@include flexbox();
+		flex-direction: column;
+	}
+	&:before {
+		content: "";
+		display: block;
+		width: 12px;
+		height: 12px;
+		background-color: #ffffff;
+		border-top: 2px solid #e8e8e8;
+		border-left: 2px solid #e8e8e8;
+		transform: rotate(45deg);
+		position: absolute;
+		top: -7px;
+		left: 27px;
+		z-index: 10;
+	}
+}
+
+.cascade-cart__item {
+	height: 100%;
+	border-bottom: 1px solid #ededed;
+	padding-bottom: 16px;
+	padding-top: 20px;
+}
+
+.cart__item-row {
+	@include flexbox();
+	height: 100%;
+}
+
+.cart__img_2 {
+
+	}
+
+
+.cart__content-row {
+	@include flexbox();
+	flex-direction: column;
+	padding-top: 10px;
+	padding-left: 15px;
+}
+
+.cart__item-title {
+	color: #222222;
+	font-size: 12px;
+	font-weight: 700;
+	text-align: right;
+	text-transform: uppercase;
+	padding-bottom: 12px;
+}
+
+
+//</CASCADE>-----------------------------
+
+//<CART RATING>-------------------------
+
+.cart__simple-rating-1,
+.cart__simple-rating-2 {
+	position: relative;
+	font-size: 12px;
+	display: inline-block;
+	padding-bottom: 24px;
+}
+
+.cart__simple-rating-1::before,
+.cart__simple-rating-2::before {
+	content: '★★★★★'; //Параметром font-size для .simple-rating {}можно регулировать размер звезды
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 44px;
+	margin-left: -45px;
+}
+
+.cart__simple-rating-items {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: -25px;
+	display: flex;
+	flex-direction: row-reverse;
+	overflow: hidden;
+}
+
+.cart__simple-rating-item {
+	position: absolute;
+	width: 0;
+	height: 0;
+	opacity: 0;
+	visibility: hidden;
+	top: 0;
+	left: 0;
+}
+
+.cart__simple-rating-item:checked,
+.cart__simple-rating-item:checked~.cart__simple-rating-label {
+	color: #ffd300;
+}
+
+.cart__simple-rating-label {
+	flex: 0 0 13.5%;
+	height: 100%;
+	cursor: pointer;
+	color: #fff;
+}
+
+.cart__simple-rating-label::before {
+	content: '★';
+
+	display: block;
+	transition: all 0.3s ease 0s;
+}
+
+.cart__simple-rating-label:hover,
+.cart__simple-rating-label:hover~.cart__simple-rating-label,
+.cart__simple-rating-label:checked~.cart__simple-rating-label:hover {
+	color: #ffef9f;
+}
+
+//<CART RATING>-------------------------
+
+.item__price {
+	color: #f16d7f;
+	font-size: 12px;
+	font-weight: 400;
+	text-align: left;
+	text-transform: uppercase;
+	font-size: 10px;
+}
+
+.cascade-cart__sum {
+	color: #222222;
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding-top: 19px;
+	padding-bottom: 32px;
+	.cart__total {
+		float: left;
+		display: inline-block;
+		text-align: left;
+	}
+	.cart__money {
+		text-align: right;
+	}
+}
+
+.cascade-cart__checkout {
+	color: #f16d7f;
+	font-size: 14px;
+	font-weight: 700;
+	text-align: center;
+	text-transform: uppercase;
+	border-radius: 5px;
+	border: 1.5px solid #f16d7f;
+	background-color: #ffffff;
+	padding: 19px 74px;
+	margin-bottom: 11px;
+	&:hover {
+		background-color: #f16d7f;
+		color: #ffffff;
+		transition: all 0.5s ease 0s;
+	}
+}
+
+.cascade-cart__goToCart {
+	color: #4a4a4a;
+	font-size: 14px;
+	font-weight: 700;
+	text-align: center;
+	text-transform: uppercase;
+	border: 1.5px solid #eaeaea;
+	border-radius: 5px;
+	background-color: #ffffff;
+	padding: 19px 69px;
+	&:hover {
+		background-color: #696868;
+		color: #ffffff;
+		transition: all 0.5s ease 0s;
+	}
+}
+
+//</CART CASCADE>-------------------------------------
+
+//</CART>==============================================================================
+
 
 
 a.account__link {
@@ -296,5 +603,28 @@ a.account__link {
 	}
 	&:active:after {
 		border-top: 6px solid white;
+	}
+}
+
+@media (max-width: 550px) {
+	a.account__link {
+		font-size: 0;
+		padding: 22px;
+		background: url('../fonts/address-book-regular.svg') center/58% no-repeat;
+		opacity: 0.6;
+
+		&:hover {
+			color: transparent;
+			box-shadow: none;
+			opacity: 0.3;
+		}
+		&:active {
+			opacity: 1;
+			box-shadow: none;
+		}
+
+		&:after {
+			border: none;
+		}
 	}
 }

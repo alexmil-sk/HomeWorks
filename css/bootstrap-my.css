@@ -1,0 +1,60 @@
+
+.wrapper-bs {
+
+}
+
+.container {
+	width: 1170px;
+}
+
+.wrapper-bs {
+	min-height: 100%;
+	background-color: #ffffff;
+	overflow: hidden;
+}
+
+.carousel {
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+
+.bg-light-blue {
+	background-color: #f3bcc4;
+}
+
+.margin-top {
+	margin-top: 10px;
+}
+
+.navbar-brand {
+		color: #222222;
+		font-weight: 700;
+		padding-top: 15px;
+}
+
+.nav-link {
+	color: #636363;
+	font-weight: 700;
+}
+
+.btn-outline-success {
+	color: #222222;
+	border-color: #636363;
+}
+
+input[type=search] {
+	border-color: #636363;
+}
+
+.row {
+	border: 1px solid #cccccc;
+	margin-bottom: 60px;
+	padding: 20px;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+.form-check-label {
+	padding: 0;
+	margin-top: 4px;
+}

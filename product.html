@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0 user-scalable=0">
+	<script src="https://kit.fontawesome.com/0bfd5e48c2.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="css/style.css">
+	<title>Shopping Cart</title>
+</head>
+	<body>
+		<div class="wrapper">
+			<main class="mainPage">
+				<div class="menu-fix">
+
+<header class="header">
+	<div class="container-shop">
+		<div class="header__row">
+			<div class="header__flex">
+				<div class="header__left">
+					<a href="index.html">
+						<div class="logo">
+							<img src="img/index/logo.png" alt="logo"> <span class="brand">BRAN<span class="letter">D</span></span>
+						</div>
+					</a>
+					<details class="header__browse-link">
+						<summary><span>Browse</span></summary>
+						<div class="cascade-browse">
+							<div class="cascade-browse__row">
+								<div class="cascade-browse__item">
+									<div class="cascade-browse__item-title">Woman</div>
+									<div class="cascade-browse__item-menu">
+										<ul>
+											<li class="cascade-browse__item-list"><a href="#" class="cascade-browse__item-link">Dresses</a></li>
+											<li class="cascade-browse__item-list"><a href="#" class="cascade-browse__item-link">Tops</a></li>
+											<li class="cascade-browse__item-list"><a href="#" class="cascade-browse__item-link">Sweaters/Knits</a></li>
+											<li class="cascade-browse__item-list"><a href="#" class="cascade-browse__item-link">Jackets/Coats</a></li>
+											<li class="cascade-browse__item-list"><a href="#" class="cascade-browse__item-link">Blazers</a></li>
+											<li class="cascade-browse__item-list"><a href="#" class="cascade-browse__item-link">Denim</a></li>
+											<li class="cascade-browse__item-list"><a href="#" class="cascade-browse__item-link">Leggings/Pants</a></li>
+											<li class="cascade-browse__item-list"><a href="#" class="cascade-browse__item-link">Skirts/Shorts</a></li>
+											<li class="cascade-browse__item-list"><a href="#" class="cascade-browse__item-link">Accessories</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="cascade-browse__item">
+									<div class="cascade-browse__item-title">Man</div>
+									<div class="cascade-browse__item-menu">
+										<ul>
+											<li class="cascade-browse__item-list"><a href="#" class="cascade-browse__item-link">Dresses</a></li>
+											<li class="cascade-browse__item-list"><a href="#" class="cascade-browse__item-link">Tops</a></li>
+											<li class="cascade-browse__item-list"><a href="#" class="cascade-browse__item-link">Sweaters/Knits</a></li>
+											<li class="cascade-browse__item-list"><a href="#" class="cascade-browse__item-link">Jackets/Coats</a></li>
+											<li class="cascade-browse__item-list"><a href="#" class="cascade-browse__item-link">Blazers</a></li>
+											<li class="cascade-browse__item-list"><a href="#" class="cascade-browse__item-link">Denim</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</details>
+					<input class="header__input" type="text" placeholder="Search for Item...">
+					<a class="icon-search"></a>
+				</div>
+				<div class="header__right">
+					<div class="cart__img-1"><a class="cart__img-1-a" href="#"><img src="img/index/icon/basket_black.svg" alt="cart"></a>
+						<div class="cascade-cart">
+							<div class="cascade-cart__row">
+								<div class="cascade-cart__item">
+									<div class="cart__item-row">
+										<img class="cart__img_2" src="../img/index/header_cart/header_cart_man.jpg" alt="header_cart_man">
+										<div class="cart__content-row">
+											<p class="cart__item-title">rebox zane</p>
+											<div class="cart__simple-rating-1">
+												<div class="cart__simple-rating-items">
+													<!-- ВНИМАНИЕ!!! Нумерация значений радио кнопок должна идти в обратном порядке -->
+													<input id="cart__simple-rating-5" type="radio" class="cart__simple-rating-item" name="cart__simple-rating-1" value="5" checked>
+													<label for="cart__simple-rating-5" class="cart__simple-rating-label"></label>
+													<input id="cart__simple-rating-4" type="radio" class="cart__simple-rating-item" name="cart__simple-rating-1" value="4">
+													<label for="cart__simple-rating-4" class="cart__simple-rating-label"></label>
+													<input id="cart__simple-rating-3" type="radio" class="cart__simple-rating-item" name="cart__simple-rating-1" value="3">
+													<label for="cart__simple-rating-3" class="cart__simple-rating-label"></label>
+													<input id="cart__simple-rating-2" type="radio" class="cart__simple-rating-item" name="cart__simple-rating-1" value="2">
+													<label for="cart__simple-rating-2" class="cart__simple-rating-label"></label>
+													<input id="cart__simple-rating-1" type="radio" class="cart__simple-rating-item" name="cart__simple-rating-1" value="1">
+													<label for="cart__simple-rating-1" class="cart__simple-rating-label"></label>
+												</div>
+											</div>
+											<p class="item__price">1 x $250</p>
+										</div>
+									</div>
+								</div>
+								<div class="cascade-cart__item">
+									<div class="cart__item-row">
+										<img class="cart__img_2" src="../img/index/header_cart/header_cart_girl.jpg" alt="header_cart_man">
+										<div class="cart__content-row">
+											<p class="cart__item-title">rebox zane</p>
+											<div class="cart__simple-rating-2">
+												<div class="cart__simple-rating-items">
+													<!-- ВНИМАНИЕ!!! Нумерация значений радио кнопок должна идти в обратном порядке -->
+													<input id="cart__simple-rating-10" type="radio" class="cart__simple-rating-item"
+														name="cart__simple-rating-2" value="5" checked>
+													<label for="cart__simple-rating-10" class="cart__simple-rating-label"></label>
+													<input id="cart__simple-rating-9" type="radio" class="cart__simple-rating-item"
+														name="cart__simple-rating-2" value="4">
+													<label for="cart__simple-rating-9" class="cart__simple-rating-label"></label>
+													<input id="cart__simple-rating-8" type="radio" class="cart__simple-rating-item"
+														name="cart__simple-rating-2" value="3">
+													<label for="cart__simple-rating-8" class="cart__simple-rating-label"></label>
+													<input id="cart__simple-rating-7" type="radio" class="cart__simple-rating-item"
+														name="cart__simple-rating-2" value="2">
+													<label for="cart__simple-rating-7" class="cart__simple-rating-label"></label>
+													<input id="cart__simple-rating-6" type="radio" class="cart__simple-rating-item"
+														name="cart__simple-rating-2" value="1">
+													<label for="cart__simple-rating-6" class="cart__simple-rating-label"></label>
+												</div>
+											</div>
+											<p class="item__price">1 x $250</p>
+										</div>
+									</div>
+								</div>
+								<div class="cascade-cart__sum">
+									<div class="cart__total">TOTAL</div>
+									<div class="cart__money">&#36;500.00</div>
+								</div>
+								<a href="checkout.html" class="cascade-cart__checkout">checkout</a>
+								<a href="shopping-cart.html" class="cascade-cart__goToCart">go to cart</a>
+							</div>
+						</div>
+					</div> 
+					<a class="account__link" href="checkout.html">My Account</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+	<div class="container-b">
+		<div class="header-b">
+			<div class="header-b__body">
+				<!--  
+				<a href="#" class="header-b__logo">
+					<img src="../img/index/logo.png" alt="logo">
+				</a>
+				-->
+				<div class="burger__row">
+					<div class="header__burger">
+						<span></span>
+						
+					</div>
+					<div class="nav__burger">navigation</div>
+				</div>
+				<!-- ! -->
+				<nav class="top-menu">
+					<ul class="menu__list">
+						<li class="menu__item"><a href="index.html" class="menu__link">Home</a></li>
+						<li class="menu__item"><a href="#" class="menu__link">Man</a>
+							<div class="cascade">
+								<div class="cascade__row">
+									<div class="cascade__item">
+										<div class="cascade__item-title">Man</div>
+										<div class="cascade__item-menu">
+											<ul>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Dresses</a></li>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Tops</a></li>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Sweaters/Knits</a></li>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Jackets/Coats</a></li>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Blazers</a></li>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Denim</a></li>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Leggings/Pants</a></li>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Skirts/Shorts</a></li>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Accessories</a></li>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Bags/Purses</a></li>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Bags/Purses</a></li>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Bags/Purses</a></li>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Swimwear/Underwear</a>
+												</li>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Nightwear</a></li>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Shoes</a></li>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Beauty</a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="cascade__item">
+										<div class="cascade__item-title">Man</div>
+										<div class="cascade__item-menu">
+											<ul>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Dresses</a></li>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Tops</a></li>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Sweaters/Knits</a></li>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Jackets/Coats</a></li>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Blazers</a></li>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Denim</a></li>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Leggings/Pants</a></li>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Skirts/Shorts</a></li>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Accessories</a></li>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Bags/Purses</a></li>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Bags/Purses</a></li>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Bags/Purses</a></li>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Swimwear/Underwear</a>
+												</li>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Nightwear</a></li>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Shoes</a></li>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Beauty</a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="cascade__item">
+										<div class="cascade__item-title">Man</div>
+										<div class="cascade__item-menu">
+											<ul>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Dresses</a></li>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Tops</a></li>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Sweaters/Knits</a></li>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Jackets/Coats</a></li>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Blazers</a></li>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Denim</a></li>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Leggings/Pants</a></li>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Skirts/Shorts</a></li>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Accessories</a></li>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Bags/Purses</a></li>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Bags/Purses</a></li>
+												<li class="cascade__item-list"><a href="#" class="cascade__item-link">Bags/Purses</a></li>
+												<li class="cascade__item-list">
+													<img src="../img/index/header_menu/menu_img.jpg" alt="">
+													<p class="super-sale">Super sale!</p>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="menu__item"><a href="#" class="menu__link">Women</a></li>
+						<li class="menu__item"><a href="#" class="menu__link">Kids</a></li>
+						<li class="menu__item"><a href="#" class="menu__link">Accoseriese</a></li>
+						<li class="menu__item"><a href="#" class="menu__link">Featured</a></li>
+						<li class="menu__item"><a href="#" class="menu__link">Hot Deals</a></li>
+						<li class="menu__item"><a href="bootstrap.html" class="menu__link bootstrap">Bootstrap</a></li>
+						<li class="menu__item"><a href="canvas.html" class="menu__link canvas">Canvas</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+	<script src="js/script.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="newArrivals">
+	<div class="container-shop">
+		<div class="newArrivals__row">
+			<div class="newArrivals__title">New Arrivals</div>
+			<!-- ! -->
+			<div class="newArrivals__breadcrumbs">
+				<ul class="breadcrumb">
+					<li class="breadcrumb__list"><a class="breadcrumb__link" href="index.html">Home</a></li>
+					<li class="breadcrumb__list"><a class="breadcrumb__link" href="#">Men</a></li>
+					<li class="breadcrumb__list active">New Arrivals</li>
+				</ul>
+			</div>
+			<!-- ! -->
+		</div>
+	</div>
+</div>
+				</div>
+				<div class="head-empty-arrivals"></div>
+				
+				<div class="content">
+
+					<!-- ! <GRID PRODUCT>----------------------------------------------------------- -->
+					<div class="container-shop">
+						<div class="product-grid">
+							<!-- ! <SIDEBAR MENU>  -->
+							<aside class="product-sidebar">
+								<nav class="sidebar__accordion-menu">
+									<div class="sidebar__trigger">
+										<input type="checkbox" id="checkbox-sidebar-1" name="checkbox-1" checked />
+										<label for="checkbox-sidebar-1" class="menu-title">Category<i></i></label>
+										<ul class="sidebar__content">
+											<li class="sidebar__content-list">
+												<a href="#" class="sidebar__content-link">Accessories</a>
+											</li>
+											<li class="sidebar__content-list">
+												<a href="#" class="sidebar__content-link">Bags</a>
+											</li>
+											<li class="sidebar__content-list">
+												<a href="#" class="sidebar__content-link">Denim</a>
+											</li>
+											<li class="sidebar__content-list">
+												<a href="#" class="sidebar__content-link">Hoodies&nbsp;&amp;&nbsp;Sweatshirts</a>
+											</li>
+											<li class="sidebar__content-list">
+												<a href="#" class="sidebar__content-link">Jackets&nbsp;&amp;&nbsp;Coats</a>
+											</li>
+											<li class="sidebar__content-list">
+												<a href="#" class="sidebar__content-link">Pants</a>
+											</li>
+											<li class="sidebar__content-list">
+												<a href="#" class="sidebar__content-link">Polos</a>
+											</li>
+											<li class="sidebar__content-list">
+												<a href="#" class="sidebar__content-link">Shirts</a>
+											</li>
+											<li class="sidebar__content-list">
+												<a href="#" class="sidebar__content-link">Shoes</a>
+											</li>
+											<li class="sidebar__content-list">
+												<a href="#" class="sidebar__content-link">Shorts</a>
+											</li>
+											<li class="sidebar__content-list">
+												<a href="#" class="sidebar__content-link">Sweaters&nbsp;&amp;&nbsp;Knits</a>
+											</li>
+											<li class="sidebar__content-list">
+												<a href="#" class="sidebar__content-link">T-Shirts</a>
+											</li>
+											<li class="sidebar__content-list">
+												<a href="#" class="sidebar__content-link">Tanks</a>
+											</li>
+										</ul>
+									</div>
+									<div class="sidebar__trigger">
+										<input type="checkbox" id="checkbox-sidebar-2" name="checkbox-2"/>
+										<label for="checkbox-sidebar-2" class="menu-title">BRAND<i></i></label>
+										<ul class="sidebar__content">
+											<li class="sidebar__content-list">
+												<a href="" class="sidebar__content-link">Accessories</a>
+											</li>
+											<li class="sidebar__content-list">
+												<a href="" class="sidebar__content-link">Bags</a>
+											</li>
+											<li class="sidebar__content-list">
+												<a href="" class="sidebar__content-link">Denim</a>
+											</li>
+										</ul>
+									</div>
+									<div class="sidebar__trigger">
+										<input type="checkbox" id="checkbox-sidebar-3" name="checkbox-3"/>
+										<label for="checkbox-sidebar-3" class="menu-title">Designer<i></i></label>
+										<ul class="sidebar__content">
+											<li class="sidebar__content-list">
+												<a href="#" class="sidebar__content-link">Accessories</a>
+											</li>
+											<li class="s#idebar__content-list">
+												<a href="#" class="sidebar__content-link">Bags</a>
+											</li>
+											<li class="sidebar__content-list">
+												<a href="#" class="sidebar__content-link">Denim</a>
+											</li>
+										</ul>
+									</div>
+								</nav>
+							</aside>
+							<!-- ! </SIDEBAR MENU>  -->
+							<!-- ! <PRODUCT CONTENT>  -->
+							<section class="product-content">
+								<!-- ? <PRODUCT CONTENT HEAD>   -->
+								<div class="product-content__head">
+									<!-- TRENDING -->
+									<div class="head__item head__item_trending">
+										<h2 class="head__item-title">Trending now</h2>
+										<ul class="trending__list">
+											<li><a href="#" class="trending__link ">Bohemian</a></li>
+											<li><a href="#" class="trending__link">Floral</a></li>
+											<li><a href="#" class="trending__link">Lace</a></li>
+											<li><a href="#" class="trending__link">Floral</a></li>
+											<li><a href="#" class="trending__link">Lace</a></li>
+											<li><a href="#" class="trending__link">Bohemian</a></li>
+										</ul>
+									</div>
+									<!-- SIZE -->
+									<div class="head__item head__item_size">
+										<h2 class="head__item-title">Size</h2>
+										<div class="size-content">
+											<div class="sizeCheckbox">
+												<input type="checkbox" name="checkbox-XXS" id="checkbox-XXS">
+												<label for="checkbox-XXS" class="checkbox_size">XXS</label>
+											</div>
+											<div class="sizeCheckbox">
+												<input type="checkbox" name="checkbox-XS" id="checkbox-XS">
+												<label for="checkbox-XS" class="checkbox_size">XS</label>
+											</div>
+											<div class="sizeCheckbox">
+												<input type="checkbox" name="checkbox-S" id="checkbox-S">
+												<label for="checkbox-S" class="checkbox_size">S</label>
+											</div>
+											<div class="sizeCheckbox">
+												<input type="checkbox" name="checkbox-M" id="checkbox-M">
+												<label for="checkbox-M" class="checkbox_size">M</label>
+											</div>
+											<div class="sizeCheckbox">
+												<input type="checkbox" name="checkbox-L" id="checkbox-L">
+												<label for="checkbox-L" class="checkbox_size">L</label>
+											</div>
+											<div class="sizeCheckbox">
+												<input type="checkbox" name="checkbox-XL" id="checkbox-XL">
+												<label for="checkbox-XL" class="checkbox_size">XL</label>
+											</div>
+											<div class="sizeCheckbox">
+												<input type="checkbox" name="checkbox-XXL" id="checkbox-XXL">
+												<label for="checkbox-XXL" class="checkbox_size">XXL</label>
+											</div>
+										</div>
+									</div>	
+									<!-- PRICE -->
+									<div class="head__item head__item_price">
+										<h2 class="head__item-title">Price</h2>
+										<div class="price-content">
+											<input type="range" class="range" name="price-range" min="0" max="100" value="50" id="price-range">
+											<span class="price-price price-price-1">&#36;52</span>
+											<span class="price-price price-price-2">&#36;400</span>
+										</div>
+									</div>
+								</div>
+								<!-- ? </PRODUCT HEAD>   -->
+								<!-- ? <PRODUCT GALLERY>   -->
+								<div class="product-content__gallery">
+									<!-- ! <GALLERY INPUT BLOCK> -->
+									<div class="gallery__input-block">
+										<div class="sort-by">
+											<p>Sort By</p>
+											<div class="name__select">
+												<select class="name" name="name" id="name">
+													<option value="Color">Name</option>
+													<option value="Size">Size</option>
+													<option value="Type">Type</option>
+													<option value="Season">Season</option>
+													<option value="choose country">Color</option>
+												</select>
+											</div>
+										</div>
+										<div class="head__show">
+											<p>Show</p>
+											<div class="show__select">
+												<select name="show__select" id="show">
+													<option value="bangladesh">09</option>
+													<option value="germany">06</option>
+													<option value="choose country">03</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<!-- ! </GALLERY INPUT BLOCK> -->
+									<!-- ! <GALLERY FOTO> -->
+									<div class="gallery__foto">
+										<!-- todo <ТОВАР 1> -->
+										<div class="gallery__item-product">
+											<!-- ? ссылка Single Item  -->
+											<a href="single_item.html" class="single__link-product">
+												<img class="single__link-product_img" src="img/product/1.jpg" alt="product_1">
+												<div class="product-text">
+													<p class="product-text__title">Mango People T-shirt</p>
+													<p class="product-text__price">$52.00</p>
+												</div>
+											</a>
+											<!-- ? ссылка Корзина -->
+											<div class="addToCart__row">
+												<a href="shopping-cart.html" class="addToCart">
+													<img src="img/index/icon/basket_white.svg" alt="basket_white">
+													<span class="addText">Add to Cart</span>
+												</a>
+											</div>
+										</div>
+										<!-- todo </ТОВАР 1> -->
+										<!-- todo <ТОВАР 2> -->
+										<div class="gallery__item-product">
+											<!-- ? ссылка Single Item  -->
+											<a href="single_item.html" class="single__link-product">
+												<img class="single__link-product_img" src="img/product/2.jpg" alt="product_2">
+												<div class="product-text">
+													<p class="product-text__title">Mango People T-shirt</p>
+													<p class="product-text__price">$52.00</p>
+												</div>
+											</a>
+											<!-- ? ссылка Корзина -->
+											<div class="addToCart__row">
+												<a href="shopping-cart.html" class="addToCart">
+													<img src="img/index/icon/basket_white.svg" alt="basket_white">
+													<span class="addText">Add to Cart</span>
+												</a>
+											</div>
+										</div>
+										<!-- todo </ТОВАР 2> -->
+										<!-- todo <ТОВАР 3> -->
+										<div class="gallery__item-product gallery__item_1">
+											<!-- ? ссылка Single Item  -->
+											<a href="single_item.html" class="single__link-product">
+												<img class="single__link-product_img" src="img/product/3.jpg" alt="product_3">
+												<div class="product-text">
+													<p class="product-text__title">Mango People T-shirt</p>
+													<p class="product-text__price">$52.00</p>
+												</div>
+											</a>
+											<!-- ? ссылка Корзина -->
+											<div class="addToCart__row">
+												<a href="shopping-cart.html" class="addToCart">
+													<img src="img/index/icon/basket_white.svg" alt="basket_white">
+													<span class="addText">Add to Cart</span>
+												</a>
+											</div>
+										</div>
+										<!-- todo </ТОВАР 3> -->
+										<!-- todo <ТОВАР 4> -->
+										<div class="gallery__item-product">
+											<!-- ? ссылка Single Item  -->
+											<a href="single_item.html" class="single__link-product">
+												<img class="single__link-product_img" src="img/product/4.jpg" alt="product_4">
+												<div class="product-text">
+													<p class="product-text__title">Mango People T-shirt</p>
+													<p class="product-text__price">$52.00</p>
+												</div>
+											</a>
+											<!-- ? ссылка Корзина -->
+											<div class="addToCart__row">
+												<a href="shopping-cart.html" class="addToCart">
+													<img src="img/index/icon/basket_white.svg" alt="basket_white">
+													<span class="addText">Add to Cart</span>
+												</a>
+											</div>
+										</div>
+										<!-- todo </ТОВАР 4> -->
+										<!-- todo <ТОВАР 5> -->
+										<div class="gallery__item-product">
+											<!-- ? ссылка Single Item  -->
+											<a href="single_item.html" class="single__link-product">
+												<img class="single__link-product_img" src="img/product/5.jpg" alt="product_5">
+												<div class="product-text">
+													<p class="product-text__title">Mango People T-shirt</p>
+													<p class="product-text__price">$52.00</p>
+												</div>
+											</a>
+											<!-- ? ссылка Корзина -->
+											<div class="addToCart__row">
+												<a href="shopping-cart.html" class="addToCart">
+													<img src="img/index/icon/basket_white.svg" alt="basket_white">
+													<span class="addText">Add to Cart</span>
+												</a>
+											</div>
+										</div>
+										<!-- todo </ТОВАР 5> -->
+										<!-- todo <ТОВАР 6> -->
+										<div class="gallery__item-product">
+											<!-- ? ссылка Single Item  -->
+											<a href="single_item.html" class="single__link-product">
+												<img class="single__link-product_img" src="img/product/6.jpg" alt="product_6">
+												<div class="product-text">
+													<p class="product-text__title">Mango People T-shirt</p>
+													<p class="product-text__price">$52.00</p>
+												</div>
+											</a>
+											<!-- ? ссылка Корзина -->
+											<div class="addToCart__row">
+												<a href="shopping-cart.html" class="addToCart">
+													<img src="img/index/icon/basket_white.svg" alt="basket_white">
+													<span class="addText">Add to Cart</span>
+												</a>
+											</div>
+										</div>
+										<!-- todo </ТОВАР 6> -->
+										<!-- todo <ТОВАР 7> -->
+										<div class="gallery__item-product">
+											<!-- ? ссылка Single Item  -->
+											<a href="single_item.html" class="single__link-product">
+												<img class="single__link-product_img" src="img/product/7.jpg" alt="product_7">
+												<div class="product-text">
+													<p class="product-text__title">Mango People T-shirt</p>
+													<p class="product-text__price">$52.00</p>
+												</div>
+											</a>
+											<!-- ? ссылка Корзина -->
+											<div class="addToCart__row">
+												<a href="shopping-cart.html" class="addToCart">
+													<img src="img/index/icon/basket_white.svg" alt="basket_white">
+													<span class="addText">Add to Cart</span>
+												</a>
+											</div>
+										</div>
+										<!-- todo </ТОВАР 7> -->
+										<!-- todo <ТОВАР 8> -->
+										<div class="gallery__item-product">
+											<!-- ? ссылка Single Item  -->
+											<a href="single_item.html" class="single__link-product">
+												<img class="single__link-product_img" src="img/product/8.jpg" alt="product_8">
+												<div class="product-text">
+													<p class="product-text__title">Mango People T-shirt</p>
+													<p class="product-text__price">$52.00</p>
+												</div>
+											</a>
+											<!-- ? ссылка Корзина -->
+											<div class="addToCart__row">
+												<a href="shopping-cart.html" class="addToCart">
+													<img src="img/index/icon/basket_white.svg" alt="basket_white">
+													<span class="addText">Add to Cart</span>
+												</a>
+											</div>
+										</div>
+										<!-- todo </ТОВАР 8> -->
+										<!-- todo <ТОВАР 9> -->
+										<div class="gallery__item-product">
+											<!-- ? ссылка Single Item  -->
+											<a href="single_item.html" class="single__link-product">
+												<img class="single__link-product_img" src="img/product/9.jpg" alt="product_9">
+												<div class="product-text">
+													<p class="product-text__title">Mango People T-shirt</p>
+													<p class="product-text__price">$52.00</p>
+												</div>
+											</a>
+											<!-- ? ссылка Корзина -->
+											<div class="addToCart__row">
+												<a href="shopping-cart.html" class="addToCart">
+													<img src="img/index/icon/basket_white.svg" alt="basket_white">
+													<span class="addText">Add to Cart</span>
+												</a>
+											</div>
+										</div>
+										<!-- todo </ТОВАР 9> -->
+									</div>
+									<!-- ! </GALLERY FOTO> -->
+								</div>
+								<!-- ? </PRODUCT GALLERY>   -->
+								<!-- ? <PRODUCT CONTENT FOOT>   -->
+								<div class="product-content__foot">
+									<div class="product-foot__row">
+										<div class="product-foot__slider">
+											<div class="icon-ctrl-1"></div>
+											<ul class="product-foot__list">
+												<li class="product-foot__link product-foot__link_active">1</li>
+												<li class="product-foot__link">2</li>
+												<li class="product-foot__link">3</li>
+												<li class="product-foot__link">4</li>
+												<li class="product-foot__link">5</li>
+												<li class="product-foot__link">6</li>
+												<li class="product-foot__link">....</li>
+												<li class="product-foot__link">20</li>
+											</ul>
+											<div class="icon-ctrl-2"></div>
+										</div>
+										<a href="#" class="product-foot__button">View All</a>
+									</div>
+								</div>
+								<!-- ? </PRODUCT CONTENT FOOT>   -->
+							</section>
+							<!-- ! </PRODUCT CONTENT>  -->
+						</div>
+						<!-- ! </GRID PRODUCT>----------------------------------------------------------- -->
+					</div>
+					<!-- ! <PRODUCT BLACK BLOCK GRID>----------------------------------------------------------- -->
+					<div class="product-black">
+						<div class="container-shop">
+							<div class="product-black__row">
+								<div class="product-black__item product-delivery">
+									<img src="img/index/icon/track.svg" alt="logo-track">
+									<div class="product-black__item-content">
+										<div class="product-black__item-title">Free Delivery</div>
+										<div class="product-black__item-text">
+											Lorem ipsum dolor sit amet consec tetur adipisicing elit. Odit vel provident
+											molestias conn.
+										</div>
+									</div>
+								</div>
+								<div class="product-black__item product-discounts">
+									<img src="img/index/icon/discount.svg" alt="logo-discount">
+									<div class="product-black__item-content">
+										<div class="product-black__item-title">Sales & discounts</div>
+										<div class="product-black__item-text">
+											Lorem ipsum dolor sit amet consec tetur adipisicing elit. Odit vel provident
+											molestias conn.
+										</div>
+									</div>
+								</div>
+								<div class="product-black__item product-assurence">
+									<img src="img/index/icon/crown.svg" alt="logo-crown">
+									<div class="product-black__item-content">
+										<div class="product-black__item-title">Quality assurance</div>
+										<div class="product-black__item-text">
+											Lorem ipsum dolor sit amet consec tetur adipisicing elit. Odit vel provident
+											molestias conn.
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ! </PRODUCT BLACK BLOCK GRID>----------------------------------------------------------- -->
+				</div>
+
+<div class="subscribe">
+	<div class="subscribe__img"></div>
+	<div class="subscribe__items">
+		<div class="container-shop">
+			<div class="subscribe__flex">
+				<div class="subscribe__item-left">
+							<img src="img/subscribe/subscribe_face.png" alt="subscribe_face">
+						<div class="left__content">
+							<p class="italic">“Vestibulum quis porttitor dui! Quisque viverra nunc mi,
+								a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”</p>
+							<p class="name">Bin Burhan</p>
+							<p class="company">Dhaka, Bd</p>
+							<div class="slider">
+								<div class="slider__row">
+									<div class="slider__item slider__item_l"></div>
+									<div class="slider__item slider__item_c"></div>
+									<div class="slider__item slider__item_r"></div>
+								</div>
+							</div>								
+						</div>
+				</div>
+				<div class="subscribe__item-right">
+					<div class="subscribe__item-right-row">
+						<div class="item__right-title">
+							<p class="right-upTitle">Subscribe</p>
+							<p class="right-downTitle">FOR OUR NEWLETTER AND PROMOTION</p> 
+						</div>
+						<div class="item__right-input">
+							<form action="#">
+								<input class="input-subscribe" type="email" placeholder="Enter Your Email" required>
+								<button type="submit" class="subscribe-btn">Subscribe</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="brand__footer">
+	<div class="container-shop">
+		<div class="brand__footer-row">
+			<div class="brand__description">
+				<div class="brand__description-row">
+					<div class="brand__logo">
+						<a href="index.html">
+							<div class="logo">
+								<img src="img/index/logo.png" alt="logo"> <span class="brand">BRAN<span class="letter">D</span></span>
+							</div>
+						</a>
+					</div>
+					<div class="brand__description-text">
+						<p>Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate
+							multidisciplinary
+							materials before go forward benefits. Intrinsicly syndicate an expanded array of processes and cross-unit
+							partnerships.</p>
+						<p>Efficiently plagiarize 24/365 action items and focused infomediaries.
+							Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.</p>
+							<!-- <p>Objectively strategize seamless relationships via resource sucking testing procedures. Proactively cultivate
+						next-generation results for value-added methodologies. Dynamically plagiarize unique methodologies after performance
+						based methodologies. Monotonectally empower stand-alone mindshare rather than ubiquitous opportunities. Dynamically
+						orchestrate resource sucking scenarios after alternative synergy.</p> 
+						
+						<p>Compellingly envisioneer corporate methods of empowerment before standards compliant technologies. Objectively
+						facilitate progressive.</p> -->
+					</div>
+				</div>
+			</div>
+			<div class="brand-columns">
+				<div class="brand-columns__row">
+					<div class="brand__menu company">
+						<div class="brand__menu-row">
+							<div class="brand__menu-title">COMPANY</div>
+							<ul class="brand__menu-items">
+								<li class="brand__menu-list"><a href="#" class="brand__menu-link">Home</a></li>
+								<li class="brand__menu-list"><a href="#" class="brand__menu-link">Shop</a></li>
+								<li class="brand__menu-list"><a href="#" class="brand__menu-link">About</a></li>
+								<li class="brand__menu-list"><a href="#" class="brand__menu-link">How It Works</a></li>
+								<li class="brand__menu-list"><a href="#" class="brand__menu-link">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+					<!--  -->
+					<div class="brand__menu information">
+						<div class="brand__menu-row">
+							<div class="brand__menu-title">INFORMATION</div>
+							<ul class="brand__menu-items">
+								<li class="brand__menu-list"><a href="#" class="brand__menu-link">Tearms & Condition</a></li>
+								<li class="brand__menu-list"><a href="#" class="brand__menu-link">Privacy Policy</a></li>
+								<li class="brand__menu-list"><a href="#" class="brand__menu-link">How to Buy</a></li>
+								<li class="brand__menu-list"><a href="#" class="brand__menu-link">How to Sell</a></li>
+								<li class="brand__menu-list"><a href="#" class="brand__menu-link">Promotion</a></li>
+							</ul>
+						</div>
+					</div>
+					<!--  -->
+					<div class="brand__menu category">
+						<div class="brand__menu-row">
+							<div class="brand__menu-title">SHOP CATEGORY</div>
+							<ul class="brand__menu-items">
+								<li class="brand__menu-list"><a href="#" class="brand__menu-link">Men</a></li>
+								<li class="brand__menu-list"><a href="#" class="brand__menu-link">Women</a></li>
+								<li class="brand__menu-list"><a href="#" class="brand__menu-link">Child</a></li>
+								<li class="brand__menu-list"><a href="#" class="brand__menu-link">Apparel</a></li>
+								<li class="brand__menu-list"><a href="#" class="brand__menu-link">Brows All</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+<footer class="footer">
+	<div class="container-shop">
+		<div class="footer__row">
+			<div class="footer__left">
+					&copy; 2017 Brand All&nbsp;Rights&nbsp;Reserved.
+			</div>
+			<div class="footer__right">
+				<div class="footer__right-row">
+					<a class="footer__right-row-link" href="#"><span class="fab fa-facebook-f facebook_logo"></span></a>
+					<a class="footer__right-row-link" href="#"><span class="fab fa-twitter-square twitter_logo"></span></a>
+					<a class="footer__right-row-link" href="#"><span class="fab fa-linkedin-in linkedin_logo"></span></a>
+					<a class="footer__right-row-link" href="#"><span class="fab fa-pinterest-p pinterest_logo"></span></a>
+					<a class="footer__right-row-link" href="#"><span class="fab fa-google-plus-g google_logo"></span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>			</main>
+		</div>
+			
+			<!-- Подключение файла JS скриптов -->
+			<script src="js/script.js"></script>
+	</body>
+</html>

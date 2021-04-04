@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0 user-scalable=0">
+	<script src="https://kit.fontawesome.com/0bfd5e48c2.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="css/style.css">
+	<title>Shopping Cart</title>
+</head>
+	<body>
+		<div class="wrapper">
+			<main class="mainPage">
+				<div class="menu-fix">
+				
+					<!-- @import "html/header.html" -->
+				
+					<!-- @import "html/header_menu.html" -->
+				
+					<!-- @import "html/new-arrivals.html" -->
+				
+				</div>
+				<div class="head-empty-arrivals"></div>
+				
+				<div class="content">
+					
+					<!-- ! <VIDEO> --------------------------------------------------------------------->
+					<div class="container-shop">
+						<video class="player" controls width="100%" height="100%" preload="auto" poster="source/versace.jpg">
+							<source src="source/versace.ogv" type='video/ogv; codecs="theora,vorbis"'> 
+							<source src="source/versace.webm" type='video/webm; codecs="vp8, vorbis"'>
+						</video>
+					</div>
+					<!-- ! </VIDEO> -------------------------------------------------------------------->
+					<!-- ! <GRID PRODUCT DETAILS> ------------------------------------------------------>
+					<div class="container-shop">
+						<form id=[product_table] action="#">
+							<div class="grid">
+								<div class="grid__table">
+									<div class="grid__item_hd">Product Details</div>
+									<div class="grid__item_hd center-h">unite Price</div>
+									<div class="grid__item_hd center-h">Quantity</div>
+									<div class="grid__item_hd center-h">shipping</div>
+									<div class="grid__item_hd center-h">Subtotal</div>
+									<div class="grid__item_hd center-h">ACTION</div>
+									<!-- ! <row 1> -->
+									<div class="grid__item">
+										<div class="product__row">
+											<img src="img/shopping-cart/table/table_1.jpg" alt="table_1">
+											<div class="product__content">
+												<h4 class="product__title">Mango People T-shirt</h4>
+												<p class="product__text">Color:<span>Red</span></p>
+												<p class="product__text">Size:<span>Xll</span></p>
+											</div>
+										</div>
+									</div>
+									<div class="grid__item grid__item_2">&#36;150</div>
+									<div class="grid__item grid__item_3"><input type="text" name="quantity" id="quantity-1" placeholder="2"></div>
+									<div class="grid__item grid__item_4">FREE</div>
+									<div class="grid__item grid__item_5">&#36;300</div>
+									<div class="grid__item grid__item_6">
+										<button class="reset_prod" type="reset" name="reset_prod">
+											<img src="img/shopping-cart/table/icon_x.jpg" alt="icon_x">
+										</button>
+									</div>
+									<!-- ! </row 1> -->
+									<!-- ! <row 2> -->
+									<div class="grid__item">
+										<div class="product__row">
+											<img src="img/shopping-cart/table/table_2.jpg" alt="table_2">
+											<div class="product__content">
+												<h4 class="product__title">Mango People T-shirt</h4>
+												<p class="product__text">Color:<span>Red</span></p>
+												<p class="product__text">Size:<span>Xll</span></p>
+											</div>
+										</div>
+									</div>
+									<div class="grid__item grid__item_2">&#36;150</div>
+									<div class="grid__item grid__item_3"><input type="text" name="quantity" id="quantity-2" placeholder="2"></div>
+									<div class="grid__item grid__item_4">FREE</div>
+									<div class="grid__item grid__item_5">&#36;300</div>
+									<div class="grid__item grid__item_6">
+										<button class="reset_prod" type="reset" name="reset_prod">
+											<img src="img/shopping-cart/table/icon_x.jpg" alt="icon_x">
+										</button>
+									</div>
+									<!-- ! </row 2> -->
+									<!-- ! <row 3> -->
+									<div class="grid__item">
+										<div class="product__row">
+											<img src="img/shopping-cart/table/table_3.jpg" alt="table_3">
+											<div class="product__content">
+												<h4 class="product__title">Mango People T-shirt</h4>
+												<p class="product__text">Color:<span>Red</span></p>
+												<p class="product__text">Size:<span>Xll</span></p>
+											</div>
+										</div>
+									</div>
+									<div class="grid__item grid__item_2">&#36;150</div>
+									<div class="grid__item grid__item_3"><input type="text" name="quantity" id="quantity-3" placeholder="2"></div>
+									<div class="grid__item grid__item_4">FREE</div>
+									<div class="grid__item grid__item_5">&#36;300</div>
+									<div class="grid__item grid__item_6">
+										<button class="reset_prod" type="reset" name="reset_prod">
+											<img src="img/shopping-cart/table/icon_x.jpg" alt="icon_x">
+										</button>
+									</div>
+									<!-- ! </row 3> -->
+								</div>
+							</div>
+							<div class="button__row">
+								<button class="table_reset" type="reset" name="table_reset">CLEAR SHOPPING CART</button>
+								<a href="#" class="shopping__link">CONTINUE sHOPPING</a>
+							</div>
+						</form>
+
+						<!-- ! </GRID PRODUCT DETAILS>--------------------------------------------------->
+						<!-- ! <SHIPPING ADRESS - COUPON DISCOUNT>--------------------------------------->
+						<div class="shipping-coupon">
+							<div class="shipping-coupon__row">
+								<!-- ! LEFT-->
+								<div class="shipping-coupon__left">
+									<div class="shipping-coupon__left-row">
+										<div class="shipping-coupon__title">Shipping Adress</div>
+										<form action="#">
+											<fieldset>
+												<div class="bangladesh__select">
+													<select name="bangladesh" id="bangladesh">
+														<option class="bangladesh-option" value="bangladesh">Bangladesh</option>
+														<option class="bangladesh-option" value="germany">Germany</option>
+														<option class="bangladesh-option" value="russia">Russia</option>
+														<option class="bangladesh-option" value="france">France</option>
+														<option class="bangladesh-option" value="choose country">Choose country</option>
+													</select>
+												</div>
+												<input id="country" type="text" name="country" placeholder="State" required>
+												<input id="postcode" type="number" name="postcode" placeholder="Postcode/Zip" required>
+												<div class="quote__btn">
+													<button type="submit" href="#" class="quote__link" name="quote__link">get a quote</button>
+												</div>
+											</fieldset>
+										</form>
+									</div>
+								</div>
+								<!-- ! CENTER-->
+								<div class="shipping-coupon__center">
+									<div class="shipping-coupon__center-row">
+										<div class="shipping-coupon__title center__title">coupon discount</div>
+										<div class="shipping-coupon__text">Enter your coupon code if you have one</div>
+										<form action="#">
+											<fieldset>
+												<input id="state" type="text" name="state" placeholder="State" required>
+												<div class="apply-coupon__btn">
+													<button type="submit" href="#" class="apply-coupon__link" name="apply-coupon__link">Apply coupon</button>
+												</div>
+											</fieldset>
+										</form>
+									</div>
+								</div>
+								<!-- ! RIGHT-->
+								<div class="shipping-coupon__right">
+									<div class="shipping-coupon__right-row">
+										<p class="subTotal">Sub total <span>$900</span></p>
+										<p class="grandTotal">GRAND TOTAL <span>$900</span></p>
+										<hr class="hr__right">
+										<div class="proceed__btn">
+											<a type="submit" href="checkout.html" class="proceed__link" name="proceed__link">proceed to checkout</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- ! </SHIPPING ADRESS - COUPON DISCOUNT>-------------------------------------------- -->
+						
+				
+
+						
+
+
+					</div>
+					<!-- @import "html/subscribe.html" -->
+
+					<!-- @import "html/brand.html" -->
+
+				</div>
+				<!-- @import "html/footer.html" -->
+			</main>
+		</div>
+		
+		<!-- Подключение файла JS скриптов -->
+		<script src="js/script.js"></script>
+	</body>
+</html>

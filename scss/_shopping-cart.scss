@@ -1,0 +1,631 @@
+
+//<VIDEO>============================================================================
+
+.player {
+	margin: 50px 0 90px 0;
+	border: 10px solid #f16d7f;
+}
+
+
+
+//</VIDEO>============================================================================
+
+//<GRID PRODUCT DETAILS>============================================================================
+
+form #product_table {
+	padding-bottom: 63px;
+}
+
+.grid {
+	position: relative;
+	margin-bottom: 44px;
+}
+
+@media (min-width: 636px) {
+	.grid__table {
+		display: grid;
+		grid-template: 33px repeat(3, 162px) / 3fr repeat(5, 1fr);
+		justify-items: stretch;
+		align-items: stretch;
+	}
+}
+
+.grid__item_hd {
+	color: #222222;
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 20px;
+	text-align: left;
+	text-transform: uppercase;
+	letter-spacing: -0.2px;
+	border-bottom: 1px solid #eaeaea;
+}
+
+@media (max-width: 636px) {
+	.grid__item_hd {
+		text-align: center;
+	}
+}
+
+.product__row {
+	@include flexbox();
+	.product__content {
+		padding: 13px 0 0 21px;
+	}
+
+	.product__title {
+		color: #222222;
+		font-size: 13px;
+		font-weight: 400;
+		text-align: left;
+		text-transform: uppercase;
+		padding-bottom: 30px;
+	}
+
+	.product__text {
+		font-size: 13px;
+		color: #575757;
+		font-weight: 400;
+		text-align: left;
+		line-height: 20px;
+
+		span {
+			color: #6f6e6e;
+			font-weight: 300;
+			padding-left: 9px;
+		}
+	}
+}
+
+
+@media (max-width: 636px) {
+	.product__row {
+		@include flexbox();
+		align-items:center;
+		justify-content: center;
+	}
+}
+
+.center {
+	&-h {
+		text-align: center;
+	}
+
+	&-v {
+		justify-items: start;
+		align-items: stretch;
+	}
+}
+
+.grid__item {
+	padding: 22px 0;
+	border-bottom: 1px solid #eaeaea;
+
+}
+
+.grid__item_2,
+.grid__item_4,
+.grid__item_5,
+.grid__item_6 {
+	font-size: 13px;
+	color: #575757;
+	font-weight: 400;
+	text-align: center;
+	line-height: 13px;
+	padding-top: 71px;
+}
+
+.grid__item_3 {
+	padding-top: 62px;
+	text-align: center;
+	//margin: auto;
+	input {
+		width: 54px;
+		height: 30px;
+		text-align: center;
+		border: 1px solid #eaeaea;
+		background-color: #fff;
+		color: #656565;
+		font-size: 13px;
+		font-weight: 400;
+		line-height: 13px;
+		[placeholder] {
+			color: #656565;
+			font-size: 13px;
+			font-weight: 400;
+			line-height: 13px;
+		}
+		&:focus {
+			opacity: 0.67;
+			//color: #222224;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 54px;
+			letter-spacing: 0.35px;
+			background-color: #f0a8b1;
+			color: white;
+			&::placeholder {
+				color:transparent;
+			}
+		}
+	}
+}
+
+@media (max-width: 636px) {
+	.grid__item_2,
+	.grid__item_3,
+	.grid__item_4,
+	.grid__item_5,
+	.grid__item_6 {
+		padding-top: 22px;
+	}
+}
+
+
+.reset_prod {
+	&:hover {
+		transform: scale(1.5);
+	}
+	&:active {
+		transform: scale(1);
+	}
+}
+
+.button__row {
+	@include flexbox();
+	justify-content: space-between;
+}
+
+@media (max-width: 500px) {
+	.button__row {
+		flex-direction: column;
+		align-items:center;
+	}
+}
+
+.table_reset {
+	color: #4a4a4a;
+	font-size: 14px;
+	font-weight: 700;
+	text-align: center;
+	text-transform: uppercase;
+	width: 235px;
+	height: 50px;
+	border: 1px solid #eaeaea;
+	background-color: #ffffff;
+	margin-right: 20px;
+	&:hover {
+		color: #ef5b70;
+		border: 1px solid #ef5b70;
+		box-shadow: inset 0 0 20px #ef5b70;
+		transition: all 0.3s ease;
+	}
+
+	&:active {
+		box-shadow: inset 0 0 5px #ef5b70;
+		color: #f761789a;
+		transition: all 0.3s ease;
+	}
+}
+
+@media (max-width: 500px) {
+	.table_reset {
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
+}
+
+.shopping__link {
+	color: #4a4a4a;
+	font-size: 14px;
+	font-weight: 700;
+	text-align: center;
+	text-transform: uppercase;
+	//width: 225px;//?-ШИРИНА ПО МАКЕТУ. НО ПРИ RESPONSIVE ЛУЧШЕ КОГДА КНОПКИ РАВНЫ ПО ШИРИНЕ 235px
+	width: 235px;
+	height: 50px;
+	border: 1px solid #eaeaea;
+	background-color: #ffffff;
+	padding: 18px 0;
+	&:hover {
+		color: #ef5b70;
+		border: 1px solid #ef5b70;
+		box-shadow: inset 0 0 20px #ef5b70;
+		transition: all 0.3s ease;
+	}
+
+	&:active {
+		box-shadow: inset 0 0 5px #ef5b70;
+		color: #f761789a;
+		transition: all 0.3s ease;
+	}
+}
+
+//</GRID PRODUCT DETAILS>============================================================================
+
+//<SHIPPING ADRESS - COUPON DISCOUNT>===============================================
+.shipping-coupon {
+	//max-height: 350px;
+	margin-bottom: 79px;
+	margin-top: 63px;
+	width: 100%;
+	&__row {
+		@include flexbox();
+		flex-wrap: wrap;
+	}
+}
+
+@media (max-width: 1166px) {
+	.shipping-coupon {
+		&__row {
+			justify-content: space-around;
+		}
+	}
+}
+
+
+//<LEFT>-------------------------
+
+.shipping-coupon__left {
+	flex: 0 1 360px;
+	margin-right: 30px;
+	&-row {
+		@include flexbox();
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 749px) {
+	.shipping-coupon__left {
+		margin-right: 0;
+	}
+}
+
+@media (max-width: 384px) {
+	.shipping-coupon__left {
+		&-row {
+			align-items: center;
+		}
+	}
+}
+
+.shipping-coupon__title {
+	color: #222222;
+	font-size: 16px;
+	font-weight: 700;
+	text-align: left;
+	text-transform: uppercase;
+	margin-bottom: 22px;
+}
+
+.bangladesh {
+	&__select {
+		position: relative;
+		width: 355px;
+		height: 45px;
+		margin-bottom: 20px;
+		select {
+			width: 100%;
+			height: 100%;
+			color: #b1b1b1;
+			border: 1px solid #eaeaea;
+			background-color: #ffffff;
+			padding-left: 18px;
+			appearance: none;
+		}
+		&::after {
+			content:'';
+			border-style: solid;
+			border-width: 9px 6px 0 6px;
+			border-color: #bdbdbd transparent transparent transparent;
+			position: absolute;
+			pointer-events: none;
+			top: 20px;
+			right: 12px;
+		}
+		&:active::after {
+			border-color: #f0a8b1 transparent transparent transparent;
+		}
+	}
+}
+
+@media (max-width: 384px) {
+	.bangladesh {
+		&__select {
+			width: 250px;
+			margin: 0 auto 23px;
+		}
+	}
+}
+
+#country, #postcode {
+	@include flexbox();
+	width: 355px;
+	height: 45px;
+	border: 1px solid #eaeaea;
+	background-color: #ffffff;
+	color: #b1b1b1;
+	font-size: 13px;
+	font-weight: 300;
+	text-align: left;
+	padding-left: 18px;
+	&:focus {
+		opacity: 0.67;
+		color: #222224;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 54px;
+		letter-spacing: 0.35px;
+		background-color: #f0a8b1;
+		color: white;
+		&::placeholder {
+			color:transparent;
+		}
+	}
+}
+
+#country {
+	margin-bottom: 20px;
+}
+
+#postcode {
+	margin-bottom: 23px;
+}
+
+@media (max-width: 384px) {
+	#country,
+	#postcode {
+		width: 250px;
+	}
+}
+
+.quote {
+	&__btn {
+		@include flexbox();
+	}
+	&__link {
+		color: #4a4a4a;
+		font-size: 11px;
+		font-weight: 700;
+		text-align: left;
+		text-transform: uppercase;
+		border: 1px solid #eaeaea;
+		background-color: #ffffff;
+		padding: 9.5px 14px;
+		&:hover {
+			color: #ef5b70;
+			border: 1px solid #ef5b70;
+			box-shadow: inset 0 0 10px #ef5b70;
+			transition: all 0.3s ease;
+		}
+
+		&:active {
+			box-shadow: inset 0 0 5px #ef5b70;
+			color: #f761789a;
+			transition: all 0.3s ease;
+		}
+	}
+}
+
+@media (max-width: 384px) {
+	.quote {
+		&__btn {
+			justify-content: center;
+		}
+	}
+}
+
+//</LEFT>-------------------------
+//<CENTER>-------------------------
+
+.shipping-coupon__center {
+	flex: 0 1 360px;
+	margin-right: 30px;
+	&-row {
+		@include flexbox();
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 1166px) {
+	.shipping-coupon__center {
+		margin-right: 0;
+	}
+}
+
+@media (max-width: 779px) {
+	.shipping-coupon__center {
+		margin-top: 50px;
+	}
+}
+
+@media (max-width: 384px) {
+	.shipping-coupon__center {
+		&-row {
+			align-items: center;
+		}
+	}
+}
+
+.center__title {
+	margin-bottom: 26px;
+}
+
+.shipping-coupon__text {
+	color: #000000;
+	font-size: 14px;
+	font-weight: 300;
+	text-align: left;
+	margin-bottom: 24px;
+}
+
+#state {
+	@include flexbox();
+	width: 355px;
+	height: 45px;
+	border: 1px solid #eaeaea;
+	background-color: #ffffff;
+	color: #b1b1b1;
+	font-size: 13px;
+	font-weight: 300;
+	text-align: left;
+	padding-left: 18px;
+	margin-bottom: 25px;
+	&:focus {
+		opacity: 0.67;
+		color: #222224;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 54px;
+		letter-spacing: 0.35px;
+		background-color: #f0a8b1;
+		color: white;
+		&::placeholder {
+			color: transparent;
+		}
+	}
+}
+
+@media (max-width: 384px) {
+	#state {
+		width: 250px;
+	}
+}
+
+.apply-coupon {
+	&__btn {
+		@include flexbox();
+	}
+	&__link {
+		color: #4a4a4a;
+		font-size: 11px;
+		font-weight: 700;
+		text-align: left;
+		text-transform: uppercase;
+		border: 1px solid #eaeaea;
+		background-color: #ffffff;
+		padding: 9.5px 16px;
+		&:hover {
+			color: #ef5b70;
+			border: 1px solid #ef5b70;
+			box-shadow: inset 0 0 10px #ef5b70;
+			transition: all 0.3s ease;
+		}
+		&:active {
+			box-shadow: inset 0 0 5px #ef5b70;
+			color: #f761789a;
+			transition: all 0.3s ease;
+		}
+	}
+}
+
+@media (max-width: 384px) {
+	.apply-coupon {
+		&__btn {
+			justify-content: center;
+		}
+	}
+}
+
+//</CENTER>-------------------------
+
+//<RIGHT>---------------------------
+
+.shipping-coupon__right {
+	@include flexbox();
+	flex: 0 1 360px;
+	height: 214px;
+	background-color: #f5f3f3;
+	padding: 43px;
+	&-row {
+		width: 100%;
+		@include flexbox();
+		flex-direction: column;
+		justify-content: space-between;
+	}
+}
+
+@media (max-width: 1166px) {
+	.shipping-coupon__right {
+		margin-top: 50px;
+	}
+}
+
+.subTotal {
+	color: #4a4a4a;
+	font-size: 11px;
+	font-weight: 400;
+	text-align: right;
+	text-transform: uppercase;
+	margin-bottom: 14px;
+	span {
+		margin-left: 18px;
+	}
+}
+
+.grandTotal {
+	color: #222222;
+	font-size: 16px;
+	font-weight: 700;
+	text-align: right;
+	text-transform: uppercase;
+	margin-bottom: 23px;
+	span {
+		color: #f16d7f;
+		margin-left: 17px;
+	}
+}
+
+@media (max-width: 282px) {
+	.grandTotal {
+		span {
+			margin-left: 14px;
+		}
+	}
+}
+
+
+.hr__right{
+	border: 1px solid #e2e2e2;
+	margin-bottom: 15px;
+}
+
+
+.proceed {
+	&__btn {
+		@include flexbox();
+		height: 50px;
+		justify-content: center;
+	}
+	&__link {
+		@include flexbox();
+		width: 100%;
+		color: #ffffff;
+		font-size: 16px;
+		font-weight: 700;
+		text-align: center;
+		text-transform: uppercase;
+		background-color: #f16d7f;
+		justify-content: center;
+		align-items: center;
+		line-height: 20px;
+		//padding: 18px 40px;
+		&:hover {
+			color: #fff;
+			outline: 1px solid #ef5b70;
+			box-shadow: inset 0 0 30px #fff;
+			transition: all 0.3s ease;
+		}
+
+		&:active {
+			box-shadow: inset 0 0 5px #fff;
+			color: yellow;
+			transition: all 0.3s ease;
+		}
+	}
+}
+
+//</RIGHT>--------------------------
+//</SHIPPING ADRESS - COUPON DISCOUNT>===============================================
+
+

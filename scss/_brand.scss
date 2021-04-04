@@ -1,59 +1,59 @@
 .brand__footer {
-	height: 460px;
+	min-height: 460px;
 	max-width: 100%;
 	padding-top: 109px;
 	padding-bottom: 90px;
+	background-color: #ffffff;
 	&-row {
 		@include flexbox();
-		justify-content: space-between;
-
 	}
 }
+
+
+@media (max-width: 1000px) {
+	.brand__footer {
+		padding-top: 70px;
+		padding-bottom: 45px;
+		&-row {
+			flex-direction: column;
+		}
+	}
+}
+
 .brand__description {
 	flex: 0 1 40%;
-	&__description-row {
+	&-row {
 		@include flexbox();
 		flex-direction: column;
 	}
 }
 
+.brand__logo {
+	display: inline-flex;
+}
 
-.brand__description-items {
+.logo {
 	@include flexbox();
-	position: relative;
-	img {
-		margin-right: 13px;
-		height: 100%;
-		&:hover {
-			box-shadow: 0 0px 15px rgba(241, 99, 99, 0.8);
-			border-radius: 15px;
-		}
-		&:active {
-			box-shadow: 0 0px 5px rgba(36, 0, 241, 0.8);
-		}
+	margin-right: 13px;
+	height: 100%;
+	&:hover {
+		box-shadow: 0 0px 15px rgba(241, 99, 99, 0.8);
+		border-radius: 15px;
 	}
-
-	.brand-name {
+	&:active {
+		box-shadow: 0 0px 5px rgba(36, 0, 241, 0.8);
+	}
+	.brand {
 		color: #222222;
 		font-size: 27px;
 		font-weight: 300;
 		line-height: 32px;
-		//text-align: center;
 		text-transform: uppercase;
 		font-family: "Lato Light";
 		letter-spacing: 0.68px;
-		padding: 12px 0 5px 0;
-		&:hover {
-			text-shadow: 0 0px 15px rgba(241, 99, 99, 0.8);
-			font-weight: 700;
-		}
-
-		&:active {
-			text-shadow: 0 0px 5px rgba(36, 0, 241, 0.8);
-			font-weight: 300;
-		}
+		padding: 8px 0 0 12px;
+		align-self: center;
 	}
-
 	.letter {
 		color: #f16d7f;
 		font-family: Lato;
@@ -62,7 +62,6 @@
 		margin-right: 37px;
 		;
 	}
-
 }
 
 .brand__description-text {
@@ -80,16 +79,36 @@
 	}
 }
 
+.brand-columns {
+	flex: 0 1 60%;
+	&__row {
+		@include flexbox();
+		justify-content: space-between;
+	}
+}
+
+@media (max-width: 1000px) {
+	.brand-columns {
+		padding-top: 15px;
+	}
+}
+
+@media (max-width: 550px) {
+	.brand-columns {
+		&__row {
+			flex-direction: column;
+		}
+	}
+}
+
+
 .brand__menu {
-	flex: 0 1 20%;
+	flex: 0 1 100%;
 	height: 100%;
+	padding-left: 37px;
 	&-row {
 		@include flexbox();
 		flex-direction: column;
-		padding-left: 40px;
-		
-		
-
 	}
 	&-title {
 		color: #f16d7f;
@@ -117,12 +136,17 @@
 		letter-spacing: 0.4px;
 		line-height: 42px;
 		&:hover {
-			//border-bottom: 3px solid #ef5b70;
 			color: #ef5b70;
 		}
 		&:active {
-			color: #999999;
-			border-bottom: none;
+			color: #ef5b70;
+			font-weight: 700;
 		}
+	}
+}
+
+@media (max-width: 1000px) {
+	.brand__menu {
+		padding-left: 0;
 	}
 }
