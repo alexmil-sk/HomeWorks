@@ -1,11 +1,14 @@
 
-.product-grid {
-	min-height: 100%;
-	display: grid;
-	grid-template: 1fr / 243px 1fr;
-	grid-template-areas:
-		"sidebar"
-		"product";
+
+@media (min-width: 720px) {
+	.product-grid {
+		min-height: 100%;
+		display: grid;
+		grid-template: 1fr / 243px 1fr;
+		grid-template-areas:
+			"sidebar"
+			"product";
+	}
 }
 
 
@@ -50,9 +53,11 @@
 	padding-left: 16px;
 	&::before {
 		content: "";
+		//display: inline-block;
 		width: 5px;
 		height: 37px;
 		background-color: #ef5b70;
+		//margin-right: 11px;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -104,25 +109,25 @@
 	transition: max-height 800ms linear;
 }
 
-.sidebar__content {
-	&-list {
-		line-height: 33px;
-	}
-	&-link {
-		display: block;
-		color: #6f6e6e;
-		font-size: 14px;
-		font-weight: 400;
-		text-align: left;
-		&:hover {
-			color: #ef5b70;
+	.sidebar__content {
+		&-list {
+			line-height: 33px;
 		}
-		&:active {
-			color: #ef5b70;
-			font-weight: 700;
+		&-link {
+			display: block;
+			color: #6f6e6e;
+			font-size: 14px;
+			font-weight: 400;
+			text-align: left;
+			&:hover {
+				color: #ef5b70;
+			}
+			&:active {
+				color: #ef5b70;
+				font-weight: 700;
+			}
 		}
 	}
-}
 
 //<SIDEBAR ACCORDiON>----------------------------------------------------------------------------------
 
@@ -131,40 +136,48 @@
 
 //<PRODUCT CONTENT>============================================================================================
 
-.product-content {
-	grid-area: product;
-	display: grid;
-	grid-template-areas:
-		"productHead"
-		"productGallery"
-		"productFoot";
-	grid-column: 2 / 2;
-	grid-row: 1 / 1;
-	margin-top: 71px;
-	margin-left: 51px;
+
+
+@media (min-width: 720px) {
+	.product-content {
+		grid-area: product;
+		display: grid;
+		grid-template-areas:
+			"productHead"
+			"productGallery"
+			"productFoot";
+		grid-column: 2 / 2;
+		grid-row: 1 / 1;
+		margin-top: 71px;
+		margin-left: 51px;
+	}
 }
 
 //?<PRODUCT CONTENT HEAD>-------------------------------------------------------------------------------
 
+@media (min-width: 1050px) {
+	.product-content__head {
+		grid-area: productHead;
+		display: grid;
+		grid-template-areas:
+		"trendingHead"
+		"sizeHead"
+		"priceHead";
+		grid-template: 74px / 177px 236px 263px;
+		grid-template-columns: repeate(3, minmax(263px, 1fr));//!----------------удалить
+		justify-content: space-between;
+		margin-bottom: 41px;
+		
+	}
+}
+
 .product-content__head {
-	grid-area: productHead;
-	display: grid;
-	grid-template-areas:
-	"trendingHead"
-	"sizeHead"
-	"priceHead";
-	grid-template: 74px / 177px 236px 263px;
-	grid-template-columns: repeate(3, minmax(263px, 1fr));//!----------------удалить
-	justify-content: space-between;
 	margin-bottom: 41px;
-	
 }
 
 
-
-
 .head__item {
-	
+
 	&-title {
 		color: #6f6e6e;
 		font-size: 14px;
@@ -189,6 +202,14 @@
 		grid-area: priceHead;
 		grid-column: 3 / 4;
 		grid-row: 1 / 1;
+	}
+}
+
+@media (max-width:1049px) {
+	.head__item {
+		&-title {
+			margin-top: 15px;
+		}
 	}
 }
 
@@ -329,7 +350,7 @@
 		text-align: right;
 	}
 }
-//!-------------------------------------
+//!-------
 
 #price-range {
 	appearance: none !important;
@@ -402,14 +423,22 @@
 
 //! <GALLERY INPUT BLOCK>-------------------------------------------------------------
 
+@media (min-width: 323px) {
+	.gallery__input-block {
+		width: 100%;
+		height: 50px;
+		background-color: #f3f3f3;
+		display: grid;
+		grid-template: 1fr / 153px 119px;
+		align-items: center;
+		padding-left: 9px;
+		margin-bottom: 58px;
+	}
+}
+
 .gallery__input-block {
-	width: 100%;
-	height: 50px;
 	background-color: #f3f3f3;
-	display: grid;
-	grid-template: 1fr / 153px 119px;
-	align-items: center;
-	padding-left: 9px;
+	padding: 9px;
 	margin-bottom: 58px;
 }
 
@@ -421,8 +450,9 @@
 	display: grid;
 	grid-auto-flow: column;
 	grid-template-columns: 65px 88px;
+	margin: 0 auto;
 
-  & p {
+	& p {
 	display: inline-block;
 	width: 153px-88;
 	color: #6f6e6e;
@@ -432,7 +462,13 @@
 	text-align: left;
 	border-right: 1px solid #ebebeb;
 	padding-left: 11px;
-  }
+	}
+}
+
+@media (max-width: 323px) {
+	.sort-by {
+		margin: 0px auto 0;
+	}
 }
 
 .name {
@@ -489,6 +525,12 @@
 	}
 }
 
+@media (max-width: 323px) {
+	.head__show {
+		margin: 9px auto 0;
+	}
+}
+
 .show {
 	&__select {
 		position: relative;
@@ -512,6 +554,7 @@
 			pointer-events: none;
 			top: 11px;
 			left: 35px;
+			//z-index: 5;
 		}
 
 		&:active::after {
@@ -521,9 +564,22 @@
 }
 
 
+
 //! </GALLERY INPUT BLOCK>-------------------------------------------------------------
 
 //! <GALLERY FOTO>-------------------------------------------------------------
+
+@media (min-width: 1166px) {
+	.gallery__foto {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(261px, 1fr));
+		grid-auto-rows: 1fr;
+		grid-area: productGallery;
+		column-gap: 30px;
+		row-gap: 39px;
+		margin-bottom: 43px;
+	}
+}
 
 .gallery__foto {
 	display: grid;
@@ -539,6 +595,8 @@
 	max-width: 261px;
 	height: 364px;
 	position: relative;
+	justify-self: center;//!--------------
+	
 	&:hover {
 		box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
 		.single__link-product_img {
@@ -547,6 +605,18 @@
 		.addToCart {
 			display: flex;
 		}
+	}
+}
+
+@media (max-width: 290px) {
+	.gallery__item-product {
+		margin-right: 10px;
+	}
+}
+
+@media (max-width: 280px) {
+	.gallery__item-product {
+		margin-right: 15px;
 	}
 }
 
@@ -572,7 +642,6 @@
 	}
 }
 
-
 //<ССЫЛКА №2 ADD TO CART>------------------
 
 //todo ---СМ. STYLE.SCSS ДЛЯ INDEX.HTML
@@ -591,14 +660,18 @@
 	height: 44px;
 	background-color: #ffffff;
 	margin-bottom: 110px;
+}
 
+@media (max-width: 875px) {
+	.product-content__foot {
+		margin-bottom: 203px;
+	}
 }
 
 .product-foot {
 	&__row {
 		@include flexbox();
 		justify-content: space-between;
-
 	}
 	&__slider {
 		@include flexbox();
@@ -631,11 +704,7 @@
 			color: #f761789a;
 			transition: all 0.5s ease;
 		}
-		
 	}
-}
-
-.product-foot {
 	&__list {
 		@include flexbox();
 		justify-content: space-between;
@@ -659,6 +728,18 @@
 		&:active {
 			color: #ef5b70;
 			font-weight: 700;
+		}
+	}
+}
+
+@media (max-width: 875px) {
+	.product-foot {
+		&__row {
+			flex-direction: column;
+			align-items:center;
+		}
+		&__button {
+			margin-top: 50px;
 		}
 	}
 }
@@ -817,7 +898,7 @@
 		min-height: 341px;
 		&__row {
 			grid-template-columns: repeat(3, 309px);
-			padding: 90px 0 70px;
+			padding: 70px 0;
 			height: 100%;
 			justify-content: space-between;
 			

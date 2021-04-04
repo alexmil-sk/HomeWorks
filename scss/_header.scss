@@ -340,17 +340,17 @@ summary::before {
 	.cart__img-1 {
 		max-height: 29px;
 		&-a {
-			padding-bottom: 50px;;
+			padding-bottom: 50px;
+			opacity: 0.6;
+			&:hover {
+				cursor: pointer;
+				opacity: 0.4;
+			}
+			&:active {
+				opacity: 1;
+			}
 		}
-		&:hover {
-			box-shadow: 0 0px 15px rgba(241, 99, 99, 0.8);
-			border-radius: 2px;
-			cursor: pointer;
-		}
-
-		&:active {
-			box-shadow: 0 0px 5px rgba(36, 0, 241, 0.8);
-		}
+		
 	}
 }
 
@@ -610,11 +610,21 @@ a.account__link {
 	a.account__link {
 		font-size: 0;
 		padding: 22px;
-		border-radius: 50%;
+		background: url('../fonts/address-book-regular.svg') center/58% no-repeat;
+		opacity: 0.6;
+
+		&:hover {
+			color: transparent;
+			box-shadow: none;
+			opacity: 0.3;
+		}
+		&:active {
+			opacity: 1;
+			box-shadow: none;
+		}
+
 		&:after {
-			right: 37%;
-			top: 46%;
-			font-size: 30px;
+			border: none;
 		}
 	}
 }
